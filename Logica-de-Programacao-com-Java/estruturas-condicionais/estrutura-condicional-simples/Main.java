@@ -5,6 +5,8 @@ class Main {
 
     if(grade >= 6) {
       System.out.println("Aluno APROVADO!");
+    } else {
+      System.out.println("Aluno REPROVADO!");
     }
   }
 }
