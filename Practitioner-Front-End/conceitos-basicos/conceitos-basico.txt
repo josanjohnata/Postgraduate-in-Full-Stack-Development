@@ -1,0 +1,13 @@
+O que é HTML?
+
+Hiper Text Markup Language
+
+- Linguagem padrão criada para páginas da Web.
+- Criada em 1991 pelo britânico Tim Berners-Lee e mantida pela W3C (World Wide Web Consortium)
+- Descreve a estrutura básica do site.
+- Consiste em uma série de elementos que informam ao navegador como exibir o conteúdo
+- Os elementos definem partes do conteúdo como "este é um título", "este é um parágrafo", "este é um link", etc'
+
+Estrutura básica de um código HTML
+
+Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final.
