@@ -11,3 +11,24 @@ Hiper Text Markup Language
 Estrutura básica de um código HTML
 
 Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final.
+
+Tag iniciais:
+- Título
+  <h1>Meu primeiro título</h1>
+
+- Parágrafo
+  <p>Meu primeiro parágrafo.</p>
+
+- Link
+  <a href="https://www.google.com.br">Google</a>
+
+Elementos semânticos = elementos com significado
+
+Um elemento semântico descreve claramente seu significado tanto para o navegador quanto para o desenvolvedor.
+* Antes do HTML5:
+  - <div id="header">
+  - <div id="nav">
+  - <div id="maincontent">
+
+O elemento <article> especifica um conteúdo independente.
+O elemento <section> define a seção em um documento.
