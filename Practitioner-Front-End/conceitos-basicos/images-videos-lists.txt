@@ -21,3 +21,28 @@ Como inserir vídeos na página HTML
   - Podem ser definidos vários tipos de vídeo e navegador usará o primeiro formato que ele reconhecer.
   - O atributo controls adiciona controles de vídeo, como play, pause e volume.
   - é indicado que sempre sejam definidas a largura e altura pois se não estiverem definidos, a página poderá piscar enquanto o vídeo é carregado.
+
+Como apresentar conteúdo em listas
+
+* Tipos de Listas
+  - Listas ordenadas:
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+  - Listas não ordenadas:
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  
+  - Listas de descrição
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hor drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
