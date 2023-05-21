@@ -8,3 +8,16 @@ Como inserir imagens na página HTML
     - src (source): Especifica o caminho para a imagem.
     alt (alternative): Especifica um texto alternativo para a imagem.
 Obs.: As imagens NÃO SÃO INSERIDAS em uma página da web; as imagens ESTÃO REFERENCIADAS na página da web. 
+
+Como inserir vídeos na página HTML
+
+* A tag <video> e seus atributos:
+  - <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.ogg" type="video/ogg">
+      Seu navegado não suporta a exibição do vídeo.
+    </video>
+  - O elemento source possui os atributos src e type que especificam o local e o tipo do arquivo de vídeo respectivamente.
+  - Podem ser definidos vários tipos de vídeo e navegador usará o primeiro formato que ele reconhecer.
+  - O atributo controls adiciona controles de vídeo, como play, pause e volume.
+  - é indicado que sempre sejam definidas a largura e altura pois se não estiverem definidos, a página poderá piscar enquanto o vídeo é carregado.
