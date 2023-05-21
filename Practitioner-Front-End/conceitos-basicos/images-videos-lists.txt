@@ -1,0 +1,10 @@
+Como inserir imagens na página HTML
+
+* A tag <img> e seus atributos:
+  - A tag <img> é usada para incorporar uma imagem em uma página da web.
+  - SintaxeL <img src="url" alt="Texto alternativo">
+  - A tag <img> contém apenas atributos e não possui uma tag de fechamento.
+  - Possui dois atributos obrigatórios:
+    - src (source): Especifica o caminho para a imagem.
+    alt (alternative): Especifica um texto alternativo para a imagem.
+Obs.: As imagens NÃO SÃO INSERIDAS em uma página da web; as imagens ESTÃO REFERENCIADAS na página da web. 
