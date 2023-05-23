@@ -27,3 +27,40 @@ O que são as tabelas e qual é a estrutura básica de uma tabela
         <th>Mexico</th>
       </tr>
     </table>
+
+Estrutura semântica de uma tabela
+
+* As tags <thead>, <tbody> e <tfoot>
+- A tag <thead> define onde está o cabeçalho
+- A tag <tbody> define onde está o corpo da tabela
+- A tag <tfoot> define onde está o rodapé da tabela
+- Com o <caption> é possível definir o título da tabela
+- São elementos importantes para leitores de tela e ferramentas de busca.
+   - Exemplo:
+    <table>
+        <caption>The Beatles<caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Instrument</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>John Lennon</th>
+          <th>Rhythm Guitar</th>
+        </tr>
+        <tr>
+          <th>Paul McCartney</th>
+          <th>Bass</th>
+        </tr>
+        <tr>
+          <th>George Harrison</th>
+          <th>Lead Guitar</th>
+        </tr>
+        <tr>
+          <th>Ringo Starr</th>
+          <th>Drums</th>
+        </tr>
+      </tbody>
+    </table>
