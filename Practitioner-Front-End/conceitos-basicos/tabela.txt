@@ -1,0 +1,29 @@
+O que são as tabelas e qual é a estrutura básica de uma tabela
+
+* Conceito
+- Uma tabela é um conjunto estruturado de dados composto de linhas e colunas.
+- Uma tabela permite pesquisar de forma rápida e fácil valores que indicam algum tipo de conexão entre diferentes tipos de dados, por exemplo, uma pessoa e sua idade ou um horário no dia da semana, poe exemplo.
+
+* As tags <table>, <tr> e <td>
+- Cada linha da tabela começa com uma yag <tr> e termina com uma </tr>.
+- Cada célula da tabela começa coma a tag <td> e termina com a </td>. Tudo entre o conteúdo exibido na tabela.
+- A tabela pode ter quantas linhas forem necessárias, apenas certifique-se de que o número de células seja o mesmo em cada linha.
+- Caso deseje que a primeira linha seja uma cabeçalho, utilize a tag <th> em vez da tag <td> isso deixará o conteúdo em negrito e centralizado.
+  - Exemplo:
+    <table style='width:100%'>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <th>Alfreds Futterkiste</th>
+        <th>Maria Andres</th>
+        <th>Germany</th>
+      </tr>
+      <tr>
+        <th>Centro comercial Moctezuma</th>
+        <th>Francisco Chang</th>
+        <th>Mexico</th>
+      </tr>
+    </table>
