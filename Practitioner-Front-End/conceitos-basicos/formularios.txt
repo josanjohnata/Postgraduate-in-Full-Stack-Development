@@ -56,3 +56,30 @@ exemplo:
       <button>Salvar</button>
     </fieldset>
   </form>
+
+* Tipos de campos para envio de dados: Caixas de seleção
+- Diferente dos campos de entrada de texto, possui o atributo value, que contém o valor da caixa que será selecionada
+- Type: checkbox
+exemplo:
+  <form action="/page.php" method="post">
+    <fieldset>
+    <legend>Qual é o seu meio de transporte favorito?</legend>
+      <label for="veiculo1">
+        <input type="checkbox" name="veiculo1" value="Bicicleta">
+        Bicicleta
+      </label>
+        <br>
+        <label for="veiculo2">
+        <input type="checkbox" name="veiculo2" value="Carro">
+        Carro
+      </label>
+        <br>
+        <label for="veiculo3">
+        <input type="checkbox" name="veiculo3" value="Barco">
+        Barco
+      </label>
+        <br>
+        <br>
+      <button>Salvar</button>
+    </fieldset>
+  </form>
