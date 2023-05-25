@@ -16,3 +16,43 @@ exemplo:
     <input type="text" name="fname" name="nome">
     <input type="submit" value="Submit">
   </form>
+
+* Tipos de campos para envio de dados: Texto, e-mail, data, número e senha
+- Type: text, email, date, number e password
+exemplo:
+  <form action="/page.php" method="post">
+    <fieldset>
+    <legend>Formulário de cadastro</legend>
+      <label>Nome:<br>
+        <input type="text" name="nome">
+        <br>
+        <br>
+      </label>
+      <label>Sobrenome:<br>
+        <input type="text" name="sobrenome">
+        <br>
+        <br>
+      </label>
+      <label>Data de nascimento:<br>
+        <input type="date" name="data-nascimento">
+        <br>
+        <br>
+      </label>
+      <label>Email:<br>
+        <input type="email" name="email" placeholder="email@email.com">
+        <br>
+        <br>
+      </label>
+      <label>Telefone:<br>
+        <input type="number" name="telefone">
+        <br>
+        <br>
+      </label>
+      <label>Senha:<br>
+        <input type="password" name="senha" required pattern="[A-Z]{3}[0-9]{4}" title="Utilize 3 letras maiúsculas seguidas por 4 dígitos." />
+        <br>
+        <br>
+      </label>
+      <button>Salvar</button>
+    </fieldset>
+  </form>

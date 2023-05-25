@@ -119,9 +119,9 @@
     </table>
   </section>
   <section>
-    <h2>Contato</h2>
+    <h2>Orçamento</h2>
     <form
-      method="get"
+      method="GET"
       action=""
     >
       <label>Nome</label>
@@ -129,14 +129,46 @@
       <input
         type="text"
         name="nome"
+        required
       >
       <br>
       <br>
+
       <label>Email</label>
       <br>
       <input
         type="email"
         name="email"
+        required
+      >
+      <br>
+      <br>
+
+      <label>Data de ida</label>
+      <br>
+      <input
+        type="date"
+        name="dataIda"
+        required
+      >
+      <br>
+      <br>
+
+      <label>Data de volta</label>
+      <br>
+      <input
+        type="date"
+        name="dataVolta"
+      >
+      <br>
+      <br>
+
+      <label>Quantidade de pessoas</label>
+      <br>
+      <input
+        type="number"
+        name="qtdPessoas"
+        required
       >
       <br>
       <br>
@@ -149,6 +181,7 @@
       >
       </textarea>
       <br>
+
       <button>Salvar</button>
       <br>
       <br>
