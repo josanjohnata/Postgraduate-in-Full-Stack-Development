@@ -1,0 +1,40 @@
+O que é CSS e como é sua sintaxe
+
+* Cascading Style Sheets = Folhas de estilo em cascata
+- Linguagem usada para formatar a apresentação de uma página em HTML cujos padrões são definidos pelo W3C.
+- Utilizada para definir:
+  - Cor
+  - Fonte
+  - Tamanho do texto
+  - Espaçamento entre os elementos
+  - Posicionamento dos elementos
+  - Imagens de fundo ou cores do fundo
+  - Tornar o layout responsivo a diferentes dispositivos e tamanhos de tela
+
+* Cascading Style Sheets
+- A palavra cascata significa que um estilo aplicado a um elemento pai também se aplicará a todos os elementos filhos dentro do pai.
+  - CSS 1 (1996): Propriedades para especificar cores, fontes, margens, bordas e outros estilos básicos. -> OBSOLETO
+  - CSS 2 (1998): Propriedades para posicionamento de elementos na página.
+  - CSS 2.1: Elimina recursos que os fornecedores de navegador nunca implementaram. -> PADRONIZADO
+  - CSS 3: Abolir as imagens de plano de fundo, apresentar transições e efeitos para criar animações. -> EM PADRONIZAÇÃO
+
+- Sintaxe
+Exemplos:
+  body {
+    background-color: lightblue;
+  }
+  h1 {
+    color: red;
+    font-size:5em
+  }
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  header {
+    background-color: #F4511E;
+    text-align: center;
+  }
+  section, footer {
+    margin: 40px;
+  }
