@@ -1,0 +1,18 @@
+Formulários
+
+* O que são formulários? Estrutura Básica de um formulário
+- Uma estrutura utilizada para coletar a entrada de dados do usuário e enviar para o servidor.
+
+Elementos e atributos
+- Tags de abertura e fechamento <form></form>
+- Atributo method: método de envio
+- Atributo action: destino dos dados
+- Elemento input: Campo para entrada de dados
+- Atributo name: Nome do Campo
+- Botão de envio
+exemplo:
+  <form action="/page.php" method="post">
+    <label for="fname">Nome</label>
+    <input type="text" name="fname" name="nome">
+    <input type="submit" value="Submit">
+  </form>
