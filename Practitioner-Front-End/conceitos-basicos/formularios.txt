@@ -105,3 +105,20 @@ exemplo:
     <br>
     <input type="submit" value="submit">
   </form>
+
+* Tipos de campos para envio de dados: Lista suspensa
+- Elemento: <select>
+Exemplo:
+  <form action="action_page.php">
+    <fieldset>
+      <legend>Selecione uma montadora</legend>
+        <select name="carro">
+          <option value="volkswagen">Volkswagen</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="fiat">Fiat</option>
+          <option value="renault">Renault</option>
+        </select>
+      <button>Buscar</button>
+    </fieldset>
+  </form>
+    
