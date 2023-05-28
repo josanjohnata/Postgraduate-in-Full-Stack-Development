@@ -1,9 +1,19 @@
+body {
+  font-weight: 400;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.8em;
+  color: #818181;
+}
+
 h1 {
-  color: red;
+  font-size: 63px;
+  color: #303030;
 }
-p {
-  color: blue;
-}
-li {
-  color: green;
+
+h2 {
+  font-size: 24;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
 }

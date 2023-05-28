@@ -1,0 +1,19 @@
+Propriedades para texto
+
+* Tamanho, cor, espaçamento e família
+- Podem ser definidas características como:
+  - Tamanho da fonte: font-size;
+  - Cor da fonte: color;
+  - Peso da fonte: font-weight;
+  - Tipo da fonte: font-family;
+  - Espaçamento entre linhas: line-height;
+  - Espaçamento entre letra: letter-spacing;
+  Exemplo:
+    body {
+      font-weight: 400;
+      font-size: 15px;
+      font-family: Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+    }
+  - Obs.: Font-family especifica a família da fonte e fam;ilia genérica, caso o navegador não possua.
