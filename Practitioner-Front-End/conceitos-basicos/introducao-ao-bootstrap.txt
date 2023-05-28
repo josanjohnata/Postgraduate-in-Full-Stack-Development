@@ -37,3 +37,26 @@
     - container: define uma largura máxima para cada tamanho de tela.
     - container-{breakpoint}: largura de 100% até o tamanho de tela especificado.
     - container-fluid: define largura de 100% em qualquer tamanho de tela.
+
+* Formulários e botões
+- Principais classes:
+  - Campos de Formulários:
+    - form-label
+    - form-control
+    - form-check
+    - form-check-input
+    - form-check-label
+    - form-select
+  - Botões
+    - btn
+    - btn btn-primary
+    - btn btn-secondary
+    - btn btn-success
+    - btn btn-danger
+    - btn btn-warning
+    - btn btn-info
+    - btn btn-light
+    - btn btn-dark
+    - btn btn-link
+    - btn-lg
+    - btn-sm

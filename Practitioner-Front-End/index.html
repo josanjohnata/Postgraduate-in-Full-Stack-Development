@@ -142,116 +142,88 @@
     </table>
   </section>
   <section class="container-fluid bg-light">
-    <h2>Orçamento</h2>
+    <h2 class="text-center">Faça já o seu orçamento!</h2>
     <form
       method="GET"
       action=""
     >
       <fieldset>
-        <legend>Dados da viagem</legend>
-        <label>Nome</label>
-        <br>
-        <input
-          type="text"
-          name="nome"
-          required
-        >
-        <br>
-        <br>
+        <legend>Dados pessoais</legend>
+        <div class="mb-3">
+          <label class="form-label" for="nome">
+            Nome
+          </label>
+          <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="form-control"
+              required
+            >
+        </div>
 
-        <label>Email</label>
-        <br>
-        <input
-          type="email"
-          name="email"
-          required
-        >
-        <br>
-        <br>
+        <div class="mb-3">
+          <label class="form-label" for="email">
+            Email
+          </label>
+          <input
+              type="email"
+              name="email"
+              id="nome"
+              class="form-control"
+              placeholder="joao@email.com"
+              required
+            >
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="dataIda">
+            Data de ida
+          </label>
+          <input
+              type="date"
+              name="dataIda"
+              id="dataIda"
+              class="form-control"
+              required
+            >
+        </div>
 
-        <label>Data de ida</label>
-        <br>
-        <input
-          type="date"
-          name="dataIda"
-          required
-        >
-        <br>
-        <br>
-
-        <label>Data de volta</label>
-        <br>
-        <input
-          type="date"
-          name="dataVolta"
-        >
-        <br>
-        <br>
-
-        <label>Quantidade de pessoas</label>
-        <br>
-        <input
-          type="number"
-          name="qtdPessoas"
-          required
-        >
+        <div class="mb-3">
+          <label class="form-label" for="dataVolta">
+            Data de volta
+          </label>
+          <input
+              type="date"
+              name="dataVolta"
+              id="dataVolta"
+              class="form-control"
+              required
+            >
+        </div>
       </fieldset>
-      <br>
       <fieldset>
-        <legend>Quais serviços deseja contratar?</legend>
-        <label for="">
-          <input type="checkbox" name="passagens" value="Passagens">
-          Compra de passagens
-        <br>
-        </label>
-        <label for="">
-          <input type="checkbox" name="hospedagem" value="Hospedagem">
-          Reserva de hospedagem
-        <br>
-        </label>
-        <label for="">
-          <input type="checkbox" name="veiculos" value="Veiculo">
-          Reserva de veículos
-        </label>
+        <legend>Qual(ais) serviços deseja contratar?</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="passagens" value="Passagens">
+          <label class="form-check-label" for="passagens">
+            Compra de passagens
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="hospedagem" value="Hospedagem">
+          <label class="form-check-label" for="hospedagem">
+            Reserva de hospedagem
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="veiculos" value="Veiculo">
+          <label class="form-check-label" for="veiculos">
+            Reserva de veículos
+          </label>
+        </div>
       </fieldset>
 
-      <fieldset>
-        <legend>Escolha a forma de pagamento</legend>
-        <label>
-          <input type="radio" name="formaPagamento" value="Cartão de crédito">
-          Cartão de crédito
-        </label>
-        <label>
-          <br><input type="radio" name="formaPagamento" value="Boleto">
-          Boleto
-        </label>
-        <label>
-          <br><input type="radio" name="formaPagamento" value="Pix">
-          Pix
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Escolha o prazo para pagamento</legend>
-        <select name="prazoPagamento">
-          <option value="aVista" selected>Á vista</option>
-          <option value="5x">5x sem juros</option>
-          <option value="10x">10x com juros</option>
-        </select>
-      </fieldset>
-
-      <br>
-      <label>Comentário</label>
-      <br>
-      <textarea
-        name="comentario"
-        cols="15"
-        rows="5"
-      >
-      </textarea>
-      <br>
-
-      <button>Salvar</button>
+      <button class="btn btn-secondary">Salvar</button>
       <br>
       <br>
     </form>
