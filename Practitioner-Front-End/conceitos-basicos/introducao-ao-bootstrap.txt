@@ -3,3 +3,25 @@
 - Em outras palavras, é um kit de ferramentas de front-end, com componentes pré-construídos e plugins JavaScript que Permitem produzir sites limpos e responsivos que funcionam em vários dispositivos.
 - Foi criado em 2013 pelo Twitter está em sua quinta versão, lançada em 2021.
 - Site do projeto: https://getbootstrap.com/
+
+* Sistema de GRID
+- O Bootstrap trabalha com o conceito de dividir a página em até 12 colunas, então, para dispor o conteúdo na página é necessário cria linhas e colunas, podendo crias uma linha com apenas ou coluna ou com até 12 colunas.
+  Exemplo
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    | span | span | span | span | span | span | span | span | span | span | span | span |
+    |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |  10  |  11  |  12  |
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    |           span 4          |           span 4          |           span 4          |
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    |           span 4          |                         span 8                        |
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    |              span 6              |                  span 6                        |
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    |                                   span 12                                         |
+    –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+    - .col- (extra small devices - screen width less than 576px)
+    - .col-sm- (small devices - screen width equal to or grater than 576px)
+    - .col-md- (medium devices - screen width equal to or grater than 768px)
+    - .col-lg- (large devices - screen width equal to or grater than 992px)
+    - .col-xl- (x-large devices - screen width equal to or grater than 1200px)
+    - .col-xxl- (xx-large devices - screen width equal to or grater than 1400px)
