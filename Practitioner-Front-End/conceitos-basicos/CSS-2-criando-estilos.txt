@@ -69,3 +69,14 @@ Propriedades para texto
       background: F4511E !important;
       color: #FFFFFF !important;
     }
+
+* Usando caixas(div) e atribuindo classes e Ids
+- Div, class e id
+  * <div>
+    - É um elemento de divisão de conteúdo.
+    - É um container genérico utilizado para agrupar elementos para fins de estilos (usando class ou id)
+    - Ele deve ser utilizado somente quando não tiver outro elemento de semântica (tal como <article> ou <nav>).
+  * Classes e ids permitem a CSS e Javascript selecionar e acessar elementos da página HTML.
+    - Classes pode ser atribuídas a vários elementos
+    - Ids só podem ser atribuídos a um elemento. Ele é o identificador do elemento.
+    ** Nomenclatura: É considerada boa prática usar nomes que descrevam o propósito semântico do elemento. Ex. videos, formulario-contato.
