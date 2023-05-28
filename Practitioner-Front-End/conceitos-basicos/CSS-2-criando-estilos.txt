@@ -39,3 +39,11 @@ Propriedades para texto
       background: cyan;
       width: 66%
     }
+
+* Formatando listas para menu
+- De lista suspensa a menu horizontal
+  - home
+  - Gallery
+  - Event             ->  Home    Gallery   Event   Feedback    Contact
+  - Feedback
+  - Contact
