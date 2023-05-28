@@ -47,3 +47,25 @@ Propriedades para texto
   - Event             ->  Home    Gallery   Event   Feedback    Contact
   - Feedback
   - Contact
+
+* Estilizando tabelas com pseudo-classes
+- Aplicando cor em linhas pares e ímpares
+- Uma pseudo-classe é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado, neste caso, linhas pares e linhas ímpares da tabela.
+  Exemplo:
+    table {
+      width: 50%;
+    }
+    table td {
+      color #303030;
+      padding: 5px;
+    }
+    tr:nth-child(even) {
+      background: #E9E9E9;
+    }
+    tr:nth-child(odd) {
+      background: #BDBDBD;
+    }
+    thead th {
+      background: F4511E !important;
+      color: #FFFFFF !important;
+    }
