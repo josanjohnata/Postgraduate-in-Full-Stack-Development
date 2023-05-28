@@ -25,25 +25,3 @@ h2 {
   color: #303030;
   font-weight: 600;
 }
-
-table {
-  width: 100%;
-}
-
-table td {
-  color: #303030;
-  padding: 5px;
-}
-
-table tr:nth-child(even) {
-  background-color: #E9E9E9;
-}
-
-table tr:nth-child(odd) {
-  background-color: #BDBDBD;
-}
-
-table thead th {
-  background-color: #F4511E;
-  color: #FFFFFF;
-}

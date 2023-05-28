@@ -60,3 +60,23 @@
     - btn btn-link
     - btn-lg
     - btn-sm
+
+* Estilizando tabelas com Bootstrap
+- Principais classes:
+  - table
+  - table-primary
+  - table-secondary
+  - table-success
+  - table-danger
+  - table-warning
+  - table-info
+  - table-light
+  - table-dark
+  - table-striped
+  - table-hover
+  - table-active
+  - table-bordered
+  - table-borderless
+  - table-sm
+  - table-responsive
+- Todas as classes em: https://getbootstrap.com/docs/5.1/content/tables/
