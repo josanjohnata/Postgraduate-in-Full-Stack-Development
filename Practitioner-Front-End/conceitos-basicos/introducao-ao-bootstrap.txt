@@ -30,3 +30,10 @@
 - Estilizando Menus
   - O Bootstrap possui um conjunto de classes para formatar barras de navegação responsivas que podem expandir ou recolher, de acordo com o tamanho da tela.
   - Existem também classes para fixar o menu no topo ou no rodapé do site durante a navegação.
+
+* Containers
+- Trabalhando com caixas
+  - Os contêineres são caixas usadas para organizar o conteúdo da página. Existem 3 tipos de classe para os contêineres:
+    - container: define uma largura máxima para cada tamanho de tela.
+    - container-{breakpoint}: largura de 100% até o tamanho de tela especificado.
+    - container-fluid: define largura de 100% em qualquer tamanho de tela.
