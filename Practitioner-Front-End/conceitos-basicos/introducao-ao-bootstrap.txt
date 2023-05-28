@@ -1,0 +1,5 @@
+* O que é o Bootstrap?
+- Um framework para criar sites responsivos e mobile-first.
+- Em outras palavras, é um kit de ferramentas de front-end, com componentes pré-construídos e plugins JavaScript que Permitem produzir sites limpos e responsivos que funcionam em vários dispositivos.
+- Foi criado em 2013 pelo Twitter está em sua quinta versão, lançada em 2021.
+- Site do projeto: https://getbootstrap.com/
