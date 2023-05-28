@@ -10,13 +10,34 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Pacotes</a></li>
-        <li><a href="#">Taxas</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">Sobre nós</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Viagem dos Sonhos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end bg-warning" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Pacotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Taxas</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contatos
+              </a>
+              <ul class="dropdown-menu bg-warning">
+                <li><a class="dropdown-item" href="#">What'sApp</a></li>
+                <li><a class="dropdown-item" href="#">E-mail</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Instagram</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <h1>Venha realizar a viagem dos seus sonhos</h1>
   </header>

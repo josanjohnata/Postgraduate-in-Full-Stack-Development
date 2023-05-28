@@ -25,3 +25,8 @@
     - .col-lg- (large devices - screen width equal to or grater than 992px)
     - .col-xl- (x-large devices - screen width equal to or grater than 1200px)
     - .col-xxl- (xx-large devices - screen width equal to or grater than 1400px)
+  
+* Menus com Bootstrap
+- Estilizando Menus
+  - O Bootstrap possui um conjunto de classes para formatar barras de navegação responsivas que podem expandir ou recolher, de acordo com o tamanho da tela.
+  - Existem também classes para fixar o menu no topo ou no rodapé do site durante a navegação.
