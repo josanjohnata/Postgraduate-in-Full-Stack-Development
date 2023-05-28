@@ -17,3 +17,25 @@ Propriedades para texto
       color: #818181;
     }
   - Obs.: Font-family especifica a família da fonte e fam;ilia genérica, caso o navegador não possua.
+
+* Propriedades para elementos em geral
+- Background e margem
+  - A propriedade Background é um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo.
+  - A propriedade margin do CSS define a érea de margem nos quatro lados do elemento.
+  Exemplo:
+    .attention {
+      background: red;
+    }
+    .topBanner {
+      background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #800 repeat-y fixed;
+    }
+    .center {
+      margin: auto;
+      background: lime;
+      width: 66%;
+    }
+    .outside {
+      margin: 3rem 0 0 -3rem;
+      background: cyan;
+      width: 66%
+    }
