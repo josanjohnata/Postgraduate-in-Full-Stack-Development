@@ -1,0 +1,3 @@
+* Bootstrap II: Avançando com Bootstrap
+- Carousel
+  - É um componente de apresentação de slides que percorre elementos como um carrossel.

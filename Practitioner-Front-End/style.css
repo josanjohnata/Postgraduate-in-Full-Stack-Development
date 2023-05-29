@@ -1,27 +1,21 @@
-body {
-  font-weight: 400;
-  font-family: Lato, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.8em;
-  color: #818181;
-  background-color: #FCFCFC;
-  margin: 0;
-}
-
-section, footer {
-  margin: 40px;
+header p {
+  color: #FFFFFF;
 }
 
 h1 {
   font-size: 63px;
-  color: #FCFCFC;
-  padding: 15px;
-  text-align: center;
+  color: #FFFFFF;
 }
 
 h2 {
-  font-size: 24;
+  font-size: 24px;
   text-transform: uppercase;
   color: #303030;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.carousel-caption h5 {
+  font-size: 80px;
+  color: #FFC107;
+  text-shadow: 2px 2px 2px black;
 }
