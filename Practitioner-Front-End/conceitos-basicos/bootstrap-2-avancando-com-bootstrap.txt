@@ -5,3 +5,7 @@
 - Cards
   - Um cartão é um contêiner de conteúdo flexível e extensível.
   - Inclui opções para cabeçalhos e rodapés, uma ampla variedade de conteúdo e cores de fundo.
+
+- Modal (Caixa de diálogo flutuante)
+  - Plug-in em JavaScript do Bootstrap para adicionar caixas de diálogo flutuantes de notificações que são acionadas com clique.
+  
