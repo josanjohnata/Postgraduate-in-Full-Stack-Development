@@ -8,4 +8,6 @@
 
 - Modal (Caixa de diálogo flutuante)
   - Plug-in em JavaScript do Bootstrap para adicionar caixas de diálogo flutuantes de notificações que são acionadas com clique.
-  
+
+- Modelos (páginas de exemplos)
+  - O projeto oferece vários exemplos, desde o uso de partes da estrutura até componentes e layouts personalizados na página de exemplos.
