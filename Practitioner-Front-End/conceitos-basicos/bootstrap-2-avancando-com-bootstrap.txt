@@ -1,3 +1,7 @@
 * Bootstrap II: Avançando com Bootstrap
 - Carousel
   - É um componente de apresentação de slides que percorre elementos como um carrossel.
+
+- Cards
+  - Um cartão é um contêiner de conteúdo flexível e extensível.
+  - Inclui opções para cabeçalhos e rodapés, uma ampla variedade de conteúdo e cores de fundo.
