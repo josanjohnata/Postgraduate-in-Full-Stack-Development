@@ -1,0 +1,143 @@
+Tipos de dados e operadores
+
+* Os tipos de dados em JavaScript
+  - Tipos Primitivos:
+    - Boolean: é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: VERDADEIRO ou FALSO.
+    - String: é uma sequência de caracteres usados para representar texto.
+    - Number: é um tipo numérico.
+    - Object: é um tipo de estrutura de dados contendo dados e instruções.
+      - Objetos algumas vezes se referem a coisas do mundo real, por exemplo um objeto de carro ou um mapa em um jogo de corrida.
+      - Os objetos podem ser criados usando o construtor Object() ou o inicializador de objeto.
+    - Null: O valor null é um literal que representa um valor nulo ou "vazio".
+    - Undefined: é um  valor primitivo atribuído automaticamente a variáveis que acabaram de ser declaradas ou a argumentos formais para os quais não existem argumentos reais.
+
+  - Conversão de tipos
+    - JavaScript é uma linguagem dinamicamente tipada.
+    - Não precisa especificar o tipo de dado de uma variável quando declará-la.
+    - Os tipos de dados são convertidos automaticamente conforme a necessidade durante a execução do script.
+
+* Operadores
+  - As diversas operações possíveis em JavaScript
+    - Tipos: binários e unários.
+      - Binário (sintaxe): operando1 operador operando2.
+        Exemplo: 2 + 3; 4 - 5; x * y;
+      - Unário (sintaxe): operador operando ou ainda, operando operador.
+        Exemplo: ++z; x--; y++;
+    - Atribuição Simples
+      - Operador de atribuição "="
+        - Atribui um valor ao operando à sua esquerda baseado no valor do operando à direita.
+        - O operador de atribuição básico é o = (igual), que atribui o valor do operando à direita ao aperando à esquerda.
+          Exemplo: x = y; onde, o valor de y é atribuído a x.
+      - Operadores Aritméticos:
+          NOME                            OPERADOR ENCURTADO          SIGNIFICADO
+          Atribuição                      x = y;                      x = y;
+          Atribuição de adição            x += y;                     x = x + y;
+          Atribuição de subtração         x -= y;                     x = x - y;
+          Atribuição de multiplicação     x *= y;                     x = x * y;
+          Atribuição de divisão           x /= y;                     x = x / y;
+          Atribuição de resto             x %= y;                     x = x +% y;
+          Atribuição de exponencial       x **= y;                    x = x ** y;
+      - Operadores de comparação
+        - Operadores de comparação, como o próprio nome diz, permitem comparar dois ou mais calores. São usados frequentemente dentro de instruções condicionais, como em comandos if.
+        - Compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira.
+        - Os operandos podem ser numéricos, strings, lógicos ou objetos.
+        - Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode.
+          OPERADOR                      DESCRIÇÃO
+          Igual ==                      Retorna verdadeiro caso os sejam iguais
+          Não igual !=                  Retorna verdadeiro caso os não sejam iguais
+          Estritamente igual ===        Retorna verdadeiro caso os sejam iguais e do mesmo tipo
+          Estritamente não igual !==    Retorna verdadeiro caso os não sejam iguais e/ou não sejam do mesmo tipo
+          Maior que >                   Retorna verdadeiro caso o operando da esquerda seja maior que o da direita
+          Maior que ou igual >=         Retorna verdadeiro caso o operando da esquerda seja maior ou igual que o da direita
+          Menor que <                   Retorna verdadeiro caso o operando da esquerda seja menor que o da direita
+          Menor que ou igual <=         Retorna verdadeiro caso o operando da esquerda seja menor ou igual que o da direita
+      - Operadores lógicos
+          OPERADOR         UTILIZAÇÃO       DESCRIÇÃO
+          AND lógico $$    expr1 && expr2   (E lógico) - Retorna expr1 caso possa ser convertido para falso; senão, retorna expr2. Assim, quando utilizado com valores booleanos, && retorna verdadeiro caso ambos operandos sejam verdadeiros; caso contrário, retorna falso.
+          OU lógico ||     expr1 || expr2   (OU lógico) - Retorna expr1 caso possa ser convertido para verdadeiro; senão, retorna expr2. Assim, quando utilizado com valores booleanos, || retorna verdadeiro caso ambos operandos ou um dos operandos sejam verdadeiros; se ambos forem falsos, retorna falso.
+          NOT lógico !     !expr1           (NEGAÇÃO lógico) - Retorna expr1 caso o único operando possa ser convertido para verdadeiro; senão, retorna verdadeiro.
+      - Operador ternário
+        - condicao ? valor1 : valor2;
+          Exemplo: let status = (idade >= 18) ? "adulto" : "menor de idade";
+
+Tipos de Dados e operadores
+Introdução
+
+JavaScript é uma das linguagens mais importantes hoje. Está disponível em quase todos os dispositivos, sejam smartphones, televisores ou, graças ao NodeJS, agora também na área de servidores.
+JavaScript é uma plataforma criada pela Netscape que permite a programação orientada a objetos. Ele permite a criação de aplicativos e documentos que podem ser executados na Internet. Também oferece opções para interagir em páginas web e para ler, escrever ou alterá-los. Além disso, possui operadores poderosos para dar mais dinamismo aos nossos códigos.
+
+Objetivos da aula
+
+Definir os tipos de dados e de variáveis em Javascript
+Demonstrar os principais operadores da linguagem Javascript.
+Explicar como trabalhar variáveis e operadores em uma rotina Javascript.
+ 
+Resumo
+
+Operadores
+
+Operadores são caracteres ou cadeias de caracteres que ligam dois objetos e processam para ter um resultado. Existem vários grupos de operadores:
+
+Operadores aritméticos
+  Exemplo:
+    a = 5 + 4; // a é 9 
+    b = a-3; // b é 9-3, então 6 
+    c = a * b; // c é 9 vezes 6, então 54 
+    d = c / 4,5; // d é 54 divide 4,5, então 12 
+    e = d% 5; // e é o resto de 12 dividido por 5, então 2 (5 + 5 + 2) 
+
+Operadores de string
+Os operadores de string só podem ser usados com strings (texto). O +operador junta duas strings. Ao contrário, o +=operador é usado para anexar uma string a uma existente. Exemplo:
+
+Op.     Descrição                                   
++        Une duas strings                        
++ =     Acrescenta outro a uma string    
+
+  Exemplo:
+    a = 'ABC'; 
+    b = 'DEF';
+    c = 'GHI'; 
+    d = a + b; 
+    // d é 'ABC' mais 'DEF', então 'ABCDEF' 
+    e = 'ABC' + b; 
+    // e é 'ABCDEF' 
+    f = e; 
+    f + = c; 
+    // c, ou seja, 'GHI', é anexado a f. 
+    // obtemos f com 'ABCDEFGHI' 
+
+Operadores lógicos
+Operadores lógicos são usados para formular condições. Uma condição sempre consiste em dois lados que se baseiam na igualdade ou na desigualdade. Pode ser true ou false. Exemplo:
+
+a = 3; b = 5; 
+if (a == b) {/*...*/} 
+// se a é igual a b, a afirmação é verdadeira 
+if (a! = b) {/*...*/} 
+// se a não é igual para b, a afirmação é verdadeira 
+se (a == 3 && b! = 4) {/*...*/} 
+// se a é 3 AND b não é 4, então verdadeiro 
+se (a == 4 || b = 5) {/*...*/} 
+// se a for 4 OU b for 5, verdadeiro 
+se (a <5) {/*...*/} 
+// se a for menor que 5, verdade
+Operadores de atribuição
+
+Operadores de atribuição são usados​​ para indicar valores. 
+
+Exemplo:
+a = 3; 
+a + = 4; // = 7 
+a - = 3; // = 4 
+a * = 5; // = 20 
+a / = 4; // = 5 
+
+Dica quente para você não esquecer 
+
+Aprenda um pouco mais sobre operadores de atribuição
+Conheça mais sobre operadores lógicos
+ 
+Referência Bibliográfica
+
+Duckett J. JavaScript de alto impacto . Alta Books 2015.
+Castro R. JavaScript: guia prático. Alta Books 2019.
+Freeman Eric. Use a cabeça! JavaScript. Alta Books 2015.
