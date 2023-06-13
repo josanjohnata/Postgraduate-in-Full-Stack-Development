@@ -34,4 +34,39 @@ console.log(typeof(objeto3));
 console.log(typeof(objeto4));
 console.log(typeof(booleano));
 
-// Operadores
+// Strings
+
+let name = 'Josan Johnata';
+let lengthName = name.length;
+
+console.log(lengthName);
+
+const result = lengthName > 10 ? 'Obrigado!' : 'Por favor preencha seu nome completo.';
+console.log(result);
+
+const nameUpperCase = name.toUpperCase();
+console.log(nameUpperCase);
+
+const game = 'Barcelona vs Real Madrid';
+const positionWord = game.indexOf('Real');
+console.log(positionWord);
+
+const sentenceCut = game.slice(0, 8);
+const sentenceCut2 = game.slice(13);
+console.log(sentenceCut);
+console.log(sentenceCut2);
+
+const thereAreWord = game.includes('Real');
+console.log(thereAreWord);
+
+const string1 = 'Hello, ';
+const string2 = 'world!';
+const concatStrings = string1.concat(string2);
+console.log(concatStrings);
+
+const removeSpaceBeforeAndAfterSentence = '  Remove todos os espaços antes e depois da frase  ';
+console.log(removeSpaceBeforeAndAfterSentence.trim());
+
+const numbers = '1,2,3,4,5,6,7,8,9';
+const changeToArray = numbers.split(',');
+console.log(changeToArray);
