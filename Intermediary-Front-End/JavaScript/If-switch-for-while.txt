@@ -1,0 +1,236 @@
+Instruções If, switch, for, while e do/while
+
+# If/else
+ - Controle de fluxo
+  - if/else: estrutura condicional que executa a afirmação, dentro do bloco, se determinada condição for verdadeira. Se for falsa, executa as afirmações dentro de else.
+    Sintaxe: if(condição) {
+               afirmação1
+             } else {
+                afirmação2
+              }
+  - condição: expressão(premissa) que pode ser avaliada como verdadeira(true) ou falsa(false), veja lógica de programação para entender melhor.
+  - afirmação1: Condicional que será executada caso a condição em if seja verdadeira(true).
+    Pode ser qualquer instrução, incluindo mais condicionais if aninhadas á instrução.
+    Para executar múltiplas instruções, faça um agrupamento com uma instrução em bloco ({...}).
+    Para não executar nenhuma instrução, utilize uma instrução vazia(empty).
+  - afirmação2: Condicional que será executada caso a condição em if seja avaliada como falsa(false) e a condição else exista.
+    Pode ser qualquer instrução, incluindo instruções em bloco e mais condicionais if aninhadas.
+
+Múltiplas condicionais if/else podem ser aninhados quando necessário.
+Observe que não existe elseif (em uma palavra). O correto é a instrução com espaços (else if), conforme abaixo:
+if(condição1) {
+  instrução1
+} else if (condição2) {
+  instrução2
+} else if (condição3) {
+  instrução3
+} else {
+  instruçãoN
+}
+
+Para executar múltiplas instruções dentro de uma condição, utilize um bloco ({...}).
+Em geral, é sempre uma boa prática utilizar Instruções dentro de blocos, especialmente em códigos que envolvam condicionais if aninhadas.
+if(condição) {
+  instrução1
+} else {
+  instrução2
+}
+
+# Switch/case
+  - switch: avalia uma expressão, combinando o valor da expressão para uma cláusula case, e executa as instruções associadas ao case.
+  Exemplo:
+    switch (expressão) {
+      case valor1:
+      // Instruções executadas quando o resultados da expressão for igual á valor1
+
+      [break;]
+      case valor2:
+      // Instruções executadas quando o resultados da expressão for igual á valor2
+
+      [break;]
+      case valorN:
+      // Instruções executadas quando o resultados da expressão for igual á valorN
+
+      [break;]
+      default:
+      // Instruções executadas quando o valor da expressão é diferente de todos os cases
+
+      [break;]
+    }
+- No exemplo, if expr é avaliado como "Banana", o programa corresponde o valor com o case "Banana" executa a instrução associada.
+  Quando break for encontrado, o programa para (break), saindo de switch e executando a a instrução localizada após o switch.
+  Se break fosse omitido, a instrução para "Cereja" também seria executada.
+    switch (expr) {
+      case "Laranja":
+      console.log("A laranja custam R$0.59 o quilo.")
+      break;
+
+      case "Maçã":
+      console.log("Maçã custam R$0.32 o quilo.")
+      break;
+
+      case "Banana":
+      console.log("Banana custam R$0.48 o quilo.")
+      break;
+
+      case "Cereja":
+      console.log("Cereja custam R$3.00 o quilo.")
+      break;
+
+      case "Manga":
+      console.log("Manga custam R3.00 o quilo.")
+      break;
+
+      case "Mamão":
+      console.log("Mamão custam R$2.79 o quilo.")
+      break;
+
+      default:
+      console.log("Desculpe, estamos sem nenhuma", expr + ".")
+
+      break;
+    }
+
+# For
+  - O For Loop é a melhor forma para iterar uma série de dados ao mesmo tempo.
+    O loop for é um loop controlado por entrada no qual a condição de teste é verificada antes de ir para o corpo do programa.
+    For Loop é usado quando sabemos o número de iterações antes de entrar no loop.
+    Loops geralmente são usados para repetir uma série de passos um certo número de vezes, então eles geralmente envolvem variáveis de contador, um teste condicional, uma forma de alterar a variável de contador.
+    Em muitos casos, o loop For pode alcançar a mesma coisa que um loop while, com menos linhas de código.
+    Exemplo:
+      for (condição de inicialização; condição de teste; incremento/decremento) {
+        corpo do loop
+      }
+# For/in
+  - O for/in é utilizado para acessar as propriedades de um objeto. A sintaxe utilizada nessa estrutura é:
+    for (variável in objeto) {
+      // executa o bloco de código
+    }
+# For/of
+  - for/of: percorre objetos iterativos (incluindo Array, Map, Set, o objeto arguments e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
+    Exemplo:
+      for (variável of iterável) {
+        declaração
+      }
+      variável: A cada iteração, um valor de uma propriedade diferente é atribuído à variável.
+      iterável: Objeto cujos atributos serão iterados.
+
+# While
+  - O while é um laço que através de um bloco de código é executado enquanto uma condição especificada é verdadeira.
+    Exemplo:
+      While (condição) {
+        bloco de código para ser executado
+      }
+
+      while (i < 10) {
+        text += "The number is " + i;
+        i++;
+      }
+# Do/while
+  - do/while: cria um laço que executa uma declaração até que o teste da condição for falsa(false).
+    A condição é avaliada depois que o bloco de código é executado, resultando que uma declaração seja executada pelo menos uma vez.
+      Exemplo:  do
+                  declaração
+                while (condição);
+        declaração: A declaração é executada pelo menos uma vez.
+        condição: Uma expressão é validada depois de cada passagem pelo laço.
+        Se a condição é avaliada como verdadeira (true) o bloco de código é executado novamente.
+        Quando a condição é avaliada como falsa (false), o controle passa para a instrução seguinte ao laço do/while.
+        let result = "";
+        let i = 0;
+        do {
+          i += 1;
+          result += i + ' ';
+        } while (i < 5);
+        document.getElementById('exemplo').innerHTML = result;
+
+# MATERIAL DA AULA
+
+If, switch, for, while
+Introdução
+
+A linguagem Javascript possui uma série de instruções que possibilitam os programas implementarem tomada de decisão, bem como repetição de um trecho de código ou até mesmo todo. Estas são conhecidas respectivamente por desvios condicionais e laços, chamados comumente por Looping.
+
+ 
+
+Objetivos da aula
+
+Definir os conceitos de desvio condicional e de Laços.
+Demonstrar as principais instruções de desvio condicional e de Laços da linguagem Javascript.
+Explicar como trabalhar desvios condicionais de Loopings em uma rotina Javascript.
+ 
+
+Resumo
+
+Ao escrever um programa, pode haver uma situação em que você precise adotar um de um determinado conjunto de caminhos. Nesses casos, você precisa usar instruções condicionais que permitam que seu programa tome decisões corretas e execute as ações corretas.
+
+JavaScript oferece suporte a declarações condicionais que são usadas para executar ações diferentes com base em condições diferentes
+
+JavaScript suporta as seguintes formas de instrução if..else:
+
+declaração if
+declaração if ... else
+declaração if ... else if 
+ 
+
+Declaração if
+
+A instrução if é a instrução de controle fundamental que permite ao JavaScript tomar decisões e executar instruções condicionalmente.
+
+Sintaxe
+
+A sintaxe para uma instrução if básica é a seguinte:
+
+Aqui, uma expressão JavaScript é avaliada. Se o valor resultante for verdadeiro, a (s) instrução(ões) fornecida(s) são executadas. Se a expressão for falsa, nenhuma instrução não será executada. Na maioria das vezes, você usará operadores de comparação ao tomar decisões.
+
+Declaração if ... else
+
+A instrução 'if ... else' é a próxima forma de instrução de controle que permite ao JavaScript executar instruções de uma forma mais controlada.
+
+Aqui a expressão JavaScript é avaliada. Se o valor resultante for verdadeiro, a(s) declaração(ões) fornecida(s) no bloco ‘if’ são executadas. Se a expressão for falsa, então a (s) instrução(ões) fornecida (s) no bloco else são executadas.
+
+Declaração if ... else if ... 
+
+A instrução if ... else if ... é uma forma avançada de if ... else que permite ao JavaScript tomar uma decisão correta a partir de várias condições. Também denominada de “if aninhado”.
+
+Trata-se de uma série de instruções if, onde cada if é parte da cláusula else da instrução anterior. As instruções são executadas com base na condição verdadeira, se nenhuma das condições for verdadeira, o bloco else é executado.
+
+Switch Case
+
+Você pode usar várias instruções if ... else ... if, como visto anteriormente, para realizar uma ramificação multiway. No entanto, essa nem sempre é a melhor solução, especialmente quando todos os ramos dependem do valor de uma única variável.
+
+Com o JavaScript 1.2, você pode usar uma instrução switch que lida exatamente com essa situação e o faz de maneira mais eficiente do que as instruções if ... else if repetidas.
+
+ 
+
+Sintaxe
+
+O objetivo de uma instrução switch é fornecer uma expressão para avaliar e várias instruções diferentes para executar com base no valor da expressão. O interpretador verifica cada caso em relação ao valor da expressão até que uma correspondência seja encontrada. Se nada corresponder, uma condição default será usada.
+
+
+As instruções break indicam o final de um caso particular. Se eles fossem omitidos, o interpretador continuaria executando cada instrução em cada um dos seguintes casos.
+
+O laço while
+O loop mais básico em JavaScript é o loop while, cujo objetivo é executar uma instrução ou bloco de código repetidamente, desde que uma expressão seja verdadeira. Quando a expressão se torna falsa, o loop termina.
+
+ 
+
+Sintaxe
+
+A sintaxe do laço while em JavaScript é a seguinte:
+
+O Loop do ... while
+O loop do ... while é semelhante ao loop while, exceto que a verificação da condição ocorre no final do loop. Isso significa que o loop sempre será executado pelo menos uma vez, mesmo se a condição for falsa.
+
+ 
+
+Sintaxe
+
+A sintaxe para o loop do-while em JavaScript é a seguinte:
+
+
+
+Referência Bibliográfica
+
+FLANAGAN, David. JavaScript: O Guia Definitivo. 6ª Ed. Porto Alegre: Bookman, 2013.
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.
