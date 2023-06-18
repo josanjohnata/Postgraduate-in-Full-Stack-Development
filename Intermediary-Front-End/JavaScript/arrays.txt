@@ -1,0 +1,146 @@
+# Criando e manipulando Arrays
+- O que é um Array?
+  - Lista de objetos.
+  - Objetos que contem múltiplos valores armazenados em uma lista.
+  - Um objeto array pode ser armazenado em variáveis e ser tratado de forma muito similar a qualquer outro tipo de valor.
+  - JavaScript não possui um tipo de dados array específico.
+- Criando um array
+  - Arrays são construídos de colchetes, os quais contém uma lista de itens separados por vírgulas.
+  - elemento0, elemento1, ..., elementoN, é uma lista de valores para os elementos do array.
+  - Quando esses valores são especificados, o array é inicializado com eles como elementos deste array.
+  - A propriedade do comprimento do array é definida pelo número de argumentos.
+  - A sintaxe dos colchetes é chamada de "array literal" ou "inicializador de array".
+  Exemplo:
+    let listItems = ['item1', 'item2', 'item3', 'item4', 'item5', ..., 'itemN'];
+    let numbers = [1, 2, 3, 4, 5,];
+    let data = [1, 2, 'Josan', listItems, true];
+    let arr = new Array(element0, element1, ..., elementN);
+    let arr2 = Array(element0, element1, ..., elementN);
+- Criando um array diferente de zero e sem elementos
+  - Para criar um array com tamanho diferente de zero, mas sem nenhum item.
+  Exemplo:
+    let arr = new Array(comprimentoDoArray);
+    let arr2 = Array(comprimentoDoArray);
+    // Estes produzem exatamente o mesmo efeito:
+    let arr3 = [];
+    arr3.length = comprimentoDoArray;
+- Criando um array com um único elemento numérico
+  - Você precisa usar a sintaxe dos colchetes.
+  - Quando um único valor tipo Número é passado para o construtor do Array(), ou para uma função, ele é interpretado como um comprimentoDoArray, e não como um elemento único.
+  - Chamar Array(N) resulta em um RangeError, se N é um número não inteiro cuja porção fracionária não é zero.
+  Exemplo:
+    let arr = [42]; // Cria um array com apenas um elemento: o número 42.
+    let arr2 = Array(42); // Cria um array sem elementos e o arr2.length é definido como 42;
+      // Isso é equivalente a:
+        let arr3 = [];
+        arr3.length = 42;
+- Referenciando elementos do array
+   - Você referencia os elementos do array através do uso de elementos numéricos ordinais.
+   - Você então se refere ao primeiro elemento do array como em myArray[0] e ao segundo elemento do array como em myArray[1].
+   - O índice do elemento começa com zero.
+- Povoando um array
+  - Você pode povoar (inserir elementos) a um array atribuindo valores aos seus elementos.
+  Exemplo:
+    let employees = [];
+    employees[0] = 'Ana Maria';
+    employees[1] = 'Josan Johnata';
+    employees[2] = 'Eide Cíntia';
+    let myArray = new Array('Hello', myVar, 3.14);
+    let myArray2 = ['Manga', 'Maçã', 'Laranja'];
+- Métodos de Array
+  Algumas das principais funções para Arrays:
+  - join(): junta sequencialmente os elementos de um Array usando o caractere (ou caracteres) passado por parâmetro. Se ele não é indicado, usa-se a vírgula como default.
+  - shift(): retorna o primeiro valor de um Array e remove os demais.
+  - sort(): ordena os elementos do Array.
+  - reverse(): inverte a ordem dos elementos. O primeiro se torna o último e o último se torna o primeiro.
+  - slice(): retorna os elementos selecionados do Array.
+  - length(): indica o número de elementos em um Array.
+  - push(valor1, valor2, ...): adiciona um ou mais elementos (valor1, valor2, etc) ao final de um Array, retornando o seu novo tamanho.
+  - pop(): retorna o último elemento de um Array e remove os demais.
+- Método Splice
+  - O nome dessa função é bem parecido com slice().
+    Essa similaridade de nomes algumas vezes confundem os desenvolvedores.
+    O método splice() altera o array, seja adicionando ou removendo elementos dele.
+    Vamos ver como fazer essas operações com esse método:
+    Exemplo:
+      array.splice(índice, número de elementos);
+      - O índice é o ponto de inicio para a remoção dos elementos. Elementos que têm um número de índice menor que o índice fornecido não serão removidos:
+        array.splice(2); // Todos os elementos a partir do índice 2 serão removidos.
+      Se não definirmos o segundo parâmetro, todos os elementos começando do índice informado serão removidos do array.
+      Como um segundo exemplo, se eu passar o segundo parâmetro como 1, o elemento que está no índice 2 será removido após a execução do splice():
+        let array = [1, 2, 3, 'hello world', 4.14, true]
+        array.splice(2, 1 )
+        [1, 2, 'hello world', 4.14, true]
+
+# MATERIAL DA AULA
+
+- Introdução
+
+Em JavaScript, o array é uma única variável que é usada para armazenar diferentes elementos. É frequentemente usado quando queremos armazenar uma lista de elementos e acessá-los por uma única variável. Ao contrário da maioria das linguagens em que o array é uma referência a várias variáveis, no JavaScript array é uma única variável que armazena vários elementos.
+
+ 
+Objetivos da aula
+
+Definir os conceitos de Arrays.
+Reconhecer Arrays e seus principais métodos na linguagem Javascript
+Demonstrar a implementação de Arrays na linguagem Javascript.
+ 
+
+Resumo
+
+O objeto Array permite armazenar vários valores em uma única variável. Ele armazena uma coleção sequencial de tamanho fixo de elementos do mesmo tipo. Uma matriz é usada para armazenar uma coleção de dados, mas geralmente é mais útil pensar em uma matriz como uma coleção de variáveis do mesmo tipo.
+
+Sintaxe:
+Use a seguinte sintaxe para criar um objeto Array:
+
+O parâmetro Array é uma lista de strings ou inteiros. Ao especificar um único parâmetro numérico com o construtor Array, você especifica o comprimento inicial da matriz. O comprimento máximo permitido para uma matriz é 4.294.967.295. Você pode criar uma matriz simplesmente atribuindo os valores:
+
+Você usará números ordinais para acessar e definir valores dentro de uma matriz da seguinte maneira:
+
+Propriedades da matriz
+
+Aqui está uma lista das propriedades do objeto Array junto com sua descrição:
+
+length: propriedade de comprimento de matriz
+
+A propriedade JavaScript array length retorna um inteiro sem sinal de 32 bits que especifica o número de elementos em um array.
+
+Sintaxe:
+
+Retorna o comprimento do array.
+
+Propriedade do construtor de Array
+
+A propriedade do construtor de array JavaScript retorna uma referência à função de array que criou o protótipo da instância.
+
+Sintaxe:
+
+Valor de retorno: retorna a função que criou a instância deste objeto.
+
+Retorno:
+
+Operações básicas em matrizes
+Adicionar um elemento ao final de uma matriz
+Para adicionar um elemento ao final de uma matriz, você usa o método push ():
+
+Adicionando um elemento ao início de uma matriz
+Para adicionar um elemento ao início de uma matriz, você usa o método unshift ():
+
+Removendo um elemento do final de uma matriz
+
+Para remover um elemento do final de uma matriz, você usa o método pop ():
+
+Removendo um elemento do início de uma matriz
+
+Para remover um elemento do início de uma matriz, você usa o método shift ():
+
+Dica quente para você não esquecer
+
+Trabalhando com Vetores. Saiba mais sobre a aplicação de vetores no link: https://siteantigo.portaleducacao.com.br/conteudo/artigos/informatica/trabalhando-com-vetores/31845   
+Como ordenar um array de objetos em JavaScript https://www.youtube.com/watch?v=yc0TYlnZIp4 
+ 
+
+Referência Bibliográfica
+
+FLANAGAN, David. JavaScript: O Guia Definitivo. 6ª Ed. Porto Alegre: Bookman, 2013.
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.
