@@ -260,3 +260,174 @@ console.log('A posição do Samuel é:', nameArray.indexOf('Samuel'));
 console.log(nameArray);
 nameArray.splice(nameArray.indexOf('Eide'), 1, 'Milk');
 console.log(nameArray);
+
+// Avançando com Arrays
+// slice()
+let peopleArray = ['John', 'Eide', 'Ester', 'Milk'];
+let newPeopleArray= peopleArray.slice(1, 3);
+console.log(peopleArray);
+console.log(newPeopleArray);
+
+// concat()
+let friendsArray = ['Jack', 'Nina', 'Black', 'Pérola'];
+let familyArray = peopleArray.concat(friendsArray);
+console.log(familyArray);
+
+// Exercício: escreva uma função que recebe um array com todos os meses do ano e divida em trimestres:
+
+function divideIntoQuarters(array) {
+  const quarters = [];
+
+  for (let i = 0; i < array.length; i += 3) {
+    const quarter = array.slice(i, i + 3);
+    quarters.push(quarter);
+  }
+
+  return quarters;
+}
+
+const monthsOfYear = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+const quartersOfYear = divideIntoQuarters(monthsOfYear);
+console.log(quartersOfYear);
+
+// Filter()
+let numbersToFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let resultToFilter = numbersToFilter.filter(item => item % 2 === 0);
+console.log(resultToFilter); // resultado: [2, 4, 6, 8, 10]
+
+let filteredNumbers = numbersToFilter.filter(
+  function (value) {
+    return value > 5;
+  }
+);
+console.log(filteredNumbers); // Resultado [6, 7, 8, 9, 10]
+
+function getValues (value) {
+  return value < 5;
+}
+
+let returnedNumbers = numbersToFilter.filter(getValues);
+console.log(returnedNumbers); // Resultado [1, 2, 3, 4]
+
+const r1 = returnedNumbers.filter((value) => {
+  return value > 5;
+});
+console.log(r1); // Resultado [6, 7, 8, 9, 10]
+
+const employees = [
+  { name: "John", age: 30, salary: 5000 },
+  { name: "Mary", age: 28, salary: 4500 },
+  { name: "Peter", age: 35, salary: 6000 },
+  { name: "Ann", age: 32, salary: 5500 },
+  { name: "Carlos", age: 40, salary: 7000 }
+];
+
+let employeeList = employees.filter(
+  function(value) {
+    console.log(value.name);
+  }
+);
+
+// Exercício: crie uma lista com eletrodomésticos(produtos) com os seguintes dados, id, description e category
+// Crie uma função para filtrar por categoria e retornar apenas Kitchen Appliances.
+
+const appliances = [
+  {
+    id: 1,
+    description: "Refrigerator",
+    category: "Kitchen Appliances"
+  },
+  {
+    id: 2,
+    description: "Washing Machine",
+    category: "Laundry Appliances"
+  },
+  {
+    id: 3,
+    description: "Microwave Oven",
+    category: "Kitchen Appliances"
+  },
+  {
+    id: 4,
+    description: "Vacuum Cleaner",
+    category: "Cleaning Appliances"
+  },
+  {
+    id: 5,
+    description: "Air Conditioner",
+    category: "Climate Control Appliances"
+  }
+];
+
+const returnedCategories = appliances.filter((products) => {
+    return products.category === 'Kitchen Appliances';
+  }
+)
+
+console.log(returnedCategories);
+
+// Map()
+let numbersToMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let num = numbersToMap.map((value) => {
+  return value * 3
+});
+console.log(num); // Resultado [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+
+const employeesToMap = [
+  { name: "John", age: 30, salary: 5000 },
+  { name: "Mary", age: 28, salary: 4500 },
+  { name: "Peter", age: 35, salary: 6000 },
+  { name: "Ann", age: 32, salary: 5500 },
+  { name: "Carlos", age: 40, salary: 7000 }
+];
+
+let employeeName = employeesToMap.map(person => person.name);
+console.log(employeeName); // Resultado: ['John', 'Mary', 'Peter', 'Ann', 'Carlos']
+
+// Reduce()
+let total = 0;
+let numeros = [1, 2, 3, 4, 5, 6, 7];
+for (let i = 0; i < numeros.length; i++) {
+  total += numeros[i];
+}
+console.log(total); // Resultado: 28
+
+let numeros2 = [1, 2, 3, 4, 5, 6, 7];
+let total2 = numeros2.reduce(function(total, numero){
+  return total + numero
+}, 0)
+console.log(total2); // Resultado: 28
+
+//ForEach()
+let dozens =  [10, 20, 30, 40, 50, 60];
+let total = 0;
+
+for (let value of dozens) {
+  console.log('For', value);
+}
+
+dozens.forEach(value => console.log('ForEach', value));
+
+dozens.forEach(value => {
+  total += value;
+})
+console.log(total);
+
+dozens.forEach(function(_value, index, array) {
+  console.log(array[index]);
+})

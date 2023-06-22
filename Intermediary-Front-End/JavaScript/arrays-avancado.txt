@@ -1,0 +1,152 @@
+# Array avançado
+- Manipulando mais Arrays
+
+* Slice
+  - O método slice() copia uma parte de um array e o retorna como um novo array. Isso não modifica o array original.
+    - De: corta o array a partir do índice informado;
+    - Ate: corta o array até o índice informado.
+    Exemplo: array.slice(dem ate);
+      let array = [1, 2, 3, 'hello world', 4.12, true];
+      let newArray = array.slice(0, 3);
+      console.log(newArray);
+      [1, 2, 3]
+* Concat
+  - O concat é um método utilizado para fazer a junção de duas partes e após essa junção ele retorna uma nova.
+    Esse método no JavaScript pode ser utilizado para Strings ou em Arrays, o comando é igual, para os dois tipos de dados.
+    let titulo = 'Dr. ';
+    let nome = 'João da Silva';
+    let nome_completo = titulo.concat(nome);
+    console.log(nome_completo);
+
+    let array1 = [1, 2, 3, 4];
+    let array2 = [5, 6, 7, 8];
+    let array3 = array1.concat(array2);
+    console.log(array3);
+* Filter
+  - O método filter() recebe cada elemento do array e aplica uma instrução condicional a ele.
+    Se essa condição for verdadeira, o elemento é colocado no array de resultado.
+    Se for falsa, o elemento não é colocado lá.
+    Exemplo:
+      let novo_array = arr.filter(function callback(elemento, índice, array) {
+        // Retorna true ou false
+      }, [argumentoUsado]);
+
+      const numbers = [1, 2, 3, 4];
+      const evens = numbers.filter(item => item % 2 === 0);
+      console.log(evens); o resultado é [2, 4]
+
+      let números = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      function buscarNúmerosPares (value) {
+        if (value % 2 === 0)
+        return value;
+      }
+      let númerosPares = números.filter(buscarNúmerosPares);
+      console.log(númerosPares);
+* Map
+  - O método Array.map() permite a você iterar sobre o array e modificar seus elementos usando uma função de callback.
+    A função de callback será executada em cada um dos elementos do array.
+    
+    A sintaxe do método map()
+    arr.map(function(elemento, índice, array){}, this);
+
+    function() é uma função de callback chamada para cada elemento do array.
+    O método map() sempre passa o elemento atual, o índice do elemento atual e todo objeto do array para ela.
+
+    O argumento this será usado dentro da função de callback.
+    Por padrão, esse valor é undefined. Por exemplo, aqui está a forma de mudar o valor this para o número 80:
+
+    let arr = [2, 3, 5, 7];
+    arr.map(function(elemento, índice, array) {
+      console.log(this) // 80
+    }, 80);
+
+    let arr = [3, 4, 5, 6];
+    for (let i = 0; i < arr.length; i++){
+      arr[i] = arr[i] * 3;
+    }
+    console.log(arr) // [9, 12, 15, 18]
+
+    let arr = [3, 4, 5, 6];
+    let modifiedArr = arr.map(function(element){
+      return element * 3;
+    })
+    console.log(modifiedArr) // [9, 12, 15, 18]
+* Reduce()
+  - O método reduce() reduz um array de valores a um único valor.
+    Para obter o valor de resultado, ele executa uma função de redução em cada elemento do array.
+
+    ** Quando usar: quando se tem um array de calores e você quer somar todas eles.
+    Exemplo:
+    let total = 0;
+    let numeros = [1, 2, 3, 4, 5, 6, 7];
+    for (let i = 0; i < numeros.length; i++) {
+      total += numeros[i];
+    }
+    console.log(total); // Resultado: 28
+
+    let numeros2 = [1, 2, 3, 4, 5, 6, 7];
+    let total2 = numeros2.reduce(function(total, numero){
+      return total + numero
+    }, 0)
+    console.log(total2); // Resultado: 28
+* ForEach()
+  - O método forEach é usado para percorrer arrays, mas usa uma função diferente do "laço for" tradicional.
+    - O método forEach passa uma função de callback para cada elemento do array juntamente aos seguintes parâmetros:
+      - Valor atual (obrigatório) - O valor do elemento atual do array
+      - Índice (opcional) - O número do índice do elemento atual
+      - Array (opcional) - O objeto de array ao qual o elemento atual pertence
+      sintaxe: nome.forEach(function(valor, índice, array) {
+        console.log(array[índice]);
+      });
+
+      numbers.forEach(function(number) {
+        console.log(number);
+      });
+
+      numbers.forEach(number => console.log(number));
+
+      let foods = ['bread', 'rice', 'meat', 'pizza'];
+
+      foods.forEach(function(food) {
+        console.log(food);
+      });
+
+# Material da aula
+
+Utilizando Arrays
+Introdução
+
+Arrays são uma ferramenta poderosa e abrangente no Javascript. São muito intuitivos de usar e permite fazer quase tudo com ele. No entanto, existem diferenças importantes entre arrays em Javascript e outras linguagens convencionais. Conhecê-los ajudará você a liberar seu verdadeiro potencial.
+
+Objetivos da aula
+Demonstrar o emprego, na prática, dos Arrays Javascript nas soluções de problemas
+
+Resumo
+Quando desenvolvemos uma aplicação, geralmente, temos que manipular os arrays para que possamos por exemplo filtrar seus dados. Dessa forma, o Javascript possui alguns métodos importantes que facilitam a manipulação de array. Nesse material iremos tratar sobre como podemos trabalhar com arrays de forma eficiente e eficaz.
+
+Reduce
+O método reduce() aplica uma função em um acumulador e cada valor do array (da esquerda para a direita) para reduzi-lo a um único valor. Este método pode ser usado para condensar todos os valores de um array em um único valor. Vejamos o exemplo abaixo:
+
+Map
+Muitas vezes é necessário gerar um novo array, com base nos valores de um array existente. Isso é possível usando o map. Por exemplo, para gerar um array de comprimentos de strings a partir de um array de strings:
+
+Neste exemplo, uma função anônima é fornecida à função map(), e a função map a chamará para cada elemento na matriz, fornecendo os seguintes parâmetros, nesta ordem:
+O próprio elemento
+O índice do elemento (0, 1...)
+A matriz inteira(Array)
+ 
+Filter
+O método filter() aceita uma função de teste e retorna um novo array contendo apenas os elementos do array original que passa no teste fornecido.
+A variável odd conteria o seguinte array: [5,43].
+
+For...in
+Podemos iterar em um array de várias formas. Uma boa opção é utilizar o for...in.
+
+For...of
+Uma outra forma de iterar é usando o loop for...of. Essa é a maneira recomendada de iterar sobre os valores de um array:
+O exemplo a seguir mostra a diferença entre um loop for...of e um loop for...in:
+
+
+Referência Bibliográfica
+FLANAGAN, David. JavaScript: O Guia Definitivo. 6ª Ed. Porto Alegre: Bookman, 2013.
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.
