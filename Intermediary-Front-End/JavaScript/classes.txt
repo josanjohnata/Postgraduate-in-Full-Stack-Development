@@ -1,0 +1,111 @@
+# Classes
+- Definindo classes
+  - Quando se fala em javascript na sua definição informa que ela é orientada a objeto.
+    Mas o principio da orientação a objetos envolve o uso de classes.
+    Contudo, javascript não tinha muito bem uma classe, era usado prototype para dizer que se fazia de classe.
+    Sendo assim, a partir do ECMAScript 2015 (ES6), as classes começaram a fazer parte da linguagem.
+    Isso não mudou ou adicionou funcionalidades, mas trouxe uma melhor organização para o código, além de entrar no padrão de outras tecnologias.
+    Exemplo:
+    class User {
+      constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
+
+      getFullName() {
+        console.log(this.firstName + " " + this.lastName);
+      }
+    }
+    const user = new User("Caio", "de Lima");
+    user.getFullName(); // Resultado: "Caio de lima"
+
+  - Getters e setters são usados para proteger seus dados,especialmente na criação de classes.
+    Para cada instância de variável, um método getter retorna seu valor, enquanto um método setter o define ou atualiza.
+    Com isso em mente, getters e setters também são conhecidos como métodos de acesso e de modificação, respectivamente.
+    Por convenção, getters começam com a palavra "get" e setters com a palavra "set", seguindo de um nome de variável.
+    Exemplo:
+    class Person {
+    constructor(name) {
+      this._name = name;
+    }
+
+    get name() {
+      ...
+    }
+
+    set name(newName) {
+      ...
+    }
+  }
+
+  - Herança
+    A herança pode ser considerada um conceito chave do paradigma orientado a objetos.
+    Ela permite que classes compartilhem atributos e métodos através de hierarquia de classes.
+    Exemplo:            __________________
+                       |______Pessoa______|
+                       |# nome            |
+                       |# cpf_____________|
+                       |+cadastrarPessoa()|
+                       |#deletarPessoa()  |
+                       |__________________|
+                               / \
+                          ______|______
+                         |             |
+              __________________  __________________
+             |_______Aluno______||____Professor_____|
+             | -Matricula       || -pisPasep________|
+             |_-dataNascimento__||_-dataAdmissão____|
+             |+cadastrarPessoa()||+cadastrarPessoa()|
+             |+pesquisar()______||+pesquisar()______|
+
+# Material da aula
+
+Classes
+Introdução
+
+As classes foram introduzidas no ECMAScript 2015 e são simplificações da linguagem para as heranças baseadas nos protótipos. Não utiliza um novo modelo de herança de orientação a objetos em JavaScript. São formas mais simplificadas de criar objetos e lidar com herança.
+
+Objetivos da aula
+
+Definir os conceitos de classes e objetos.
+Reconhecer classe e objetos na linguagem Javascript
+Demonstrar a implementação de classes e objetos na linguagem Javascript.
+ 
+
+Resumo
+
+Declaração de classe
+A declaração de classe cria uma classe com um determinado nome usando herança baseada em protótipo.
+
+Definição de Classes
+
+Class Expression
+
+A class expression é uma maneira de definir uma classe no ECMAScript 2015. Semelhante às expressões de função, as expressões de classe podem ser nomeadas ou não. Se nomeado, o nome da classe é local apenas para o corpo da classe.
+
+Sintaxe
+
+Descrição
+
+Uma expressão de classe tem uma sintaxe semelhante a uma declaração de classe (instrução). Tal como acontece com as instruções de classe, o corpo de uma expressão de classe é executado no modo estrito.
+
+Existem várias diferenças entre expressões de classe e instruções de classe, no entanto:
+
+As expressões de classe podem omitir o nome da classe ("identificador de ligação"), o que não é possível com instruções de classe.
+Expressões de classe permitem que você redefina (declare novamente) classes sem lançar um SyntaxError. Este não é o caso com declarações de classe.
+O método do construtor é opcional. As classes geradas com expressões de classe sempre responderão a typeof com o valor "função".
+
+ 
+
+Exemplos
+
+Uma expressão de classe simples
+Esta é apenas uma expressão de classe anônima simples à qual você pode se referir usando a variável Foo.
+Expressões de classe nomeada
+Se quiser fazer referência à classe atual dentro do corpo da classe, você pode criar uma expressão de classe nomeada. O nome só é visível dentro do escopo da própria expressão de classe.
+ 
+
+Referência Bibliográfica
+
+FLANAGAN, David. JavaScript: O Guia Definitivo. 6ª Ed. Porto Alegre: Bookman, 2013.
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.

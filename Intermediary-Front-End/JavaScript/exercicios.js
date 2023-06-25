@@ -81,3 +81,127 @@ function amountGas(kmPerLiter, tripTime, averageSpeed) {
 };
 
 amountGas(12, 3, 80);
+
+// Exercício: calcular a media de todos os números de um array
+let numbersCalc = [8, 3, 9, 0, 2, 2,];
+function calculateNumbers(numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total / numbers.length;
+};
+
+console.log(calculateNumbers(numbersCalc));
+
+// Exercício: localizar o maior número do array
+function findMax(numbers) {
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+  return max;
+};
+
+console.log(findMax(numbersCalc));
+
+// Exercício: localizar o nome da cidade com maior número de carácteres
+let citiesOfBrazil = ['Fortaleza', 'São Paulo', 'Rio de Janeiro', 'Alagoas']
+function findCity(cities) {
+  let max = 0;
+  for (let i = 0; i < cities.length; i++) {
+    if (cities[i].length > max) {
+      max = cities[i].length;
+      maxCity = cities[i];
+    }
+  }
+  return maxCity;
+};
+
+console.log(findCity(citiesOfBrazil));
+
+// Exercício: Criar um array com cinco nomes, Guilherme, Samuel, John, Ester e Eide.
+// Acrescente o nome da Mônica, retire o último elemento do array,
+// encontre a posição do Samuel e troque Eide por Milk.
+let nameArray = ['Guilherme', 'Samuel', 'John', 'Ester', 'Eide'];
+console.log(nameArray);
+nameArray.push('Mônica');
+console.log(nameArray);
+nameArray.pop();
+console.log(nameArray);
+console.log('A posição do Samuel é:', nameArray.indexOf('Samuel'));
+console.log(nameArray);
+nameArray.splice(nameArray.indexOf('Eide'), 1, 'Milk');
+console.log(nameArray);
+
+// Exercício: escreva uma função que recebe um array com todos os meses do ano e divida em trimestres:
+
+function divideIntoQuarters(array) {
+  const quarters = [];
+
+  for (let i = 0; i < array.length; i += 3) {
+    const quarter = array.slice(i, i + 3);
+    quarters.push(quarter);
+  }
+
+  return quarters;
+}
+
+const monthsOfYear = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+const quartersOfYear = divideIntoQuarters(monthsOfYear);
+console.log(quartersOfYear);
+
+// Exercício: crie uma lista com eletrodomésticos(produtos) com os seguintes dados, id, description e category
+// Crie uma função para filtrar por categoria e retornar apenas Kitchen Appliances.
+
+const appliances = [
+  {
+    id: 1,
+    description: "Refrigerator",
+    category: "Kitchen Appliances"
+  },
+  {
+    id: 2,
+    description: "Washing Machine",
+    category: "Laundry Appliances"
+  },
+  {
+    id: 3,
+    description: "Microwave Oven",
+    category: "Kitchen Appliances"
+  },
+  {
+    id: 4,
+    description: "Vacuum Cleaner",
+    category: "Cleaning Appliances"
+  },
+  {
+    id: 5,
+    description: "Air Conditioner",
+    category: "Climate Control Appliances"
+  }
+];
+
+const returnedCategories = appliances.filter((products) => {
+    return products.category === 'Kitchen Appliances';
+  }
+)
+
+console.log(returnedCategories);
+

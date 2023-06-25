@@ -190,46 +190,6 @@ console.log(carsArray);
 let motorcycles = new Array('BMW', 'Yamaha', 'Honda');
 console.log(motorcycles);
 
-// Exercício: calcular a media de todos os números de um array
-let numbersCalc = [8, 3, 9, 0, 2, 2,];
-function calculateNumbers(numbers) {
-  let total = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    total += numbers[i];
-  }
-  return total / numbers.length;
-};
-
-console.log(calculateNumbers(numbersCalc));
-
-// Exercício: localizar o maior número do array
-function findMax(numbers) {
-  let max = numbers[0];
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] > max) {
-      max = numbers[i];
-    }
-  }
-  return max;
-};
-
-console.log(findMax(numbersCalc));
-
-// Exercício: localizar o nome da cidade com maior número de carácteres
-let citiesOfBrazil = ['Fortaleza', 'São Paulo', 'Rio de Janeiro', 'Alagoas']
-function findCity(cities) {
-  let max = 0;
-  for (let i = 0; i < cities.length; i++) {
-    if (cities[i].length > max) {
-      max = cities[i].length;
-      maxCity = cities[i];
-    }
-  }
-  return maxCity;
-};
-
-console.log(findCity(citiesOfBrazil));
-
 let arrTest = [1, 2, 3, 4, 5, 6, 7, 8];
 console.log('Array com .reverse() retorna o array invertido:', arrTest.reverse());
 console.log('Array com .join() substitui o separador pelo valor passado:', arrTest.join('-'));
@@ -247,20 +207,6 @@ arraySplice.splice(2, 1,);
 arraySplice.splice(2, 0, 'teste');
 console.log(arraySplice);
 
-// Exercício: Criar um array com cinco nomes, Guilherme, Samuel, John, Ester e Eide.
-// Acrescente o nome da Mônica, retire o último elemento do array,
-// encontre a posição do Samuel e troque Eide por Milk.
-let nameArray = ['Guilherme', 'Samuel', 'John', 'Ester', 'Eide'];
-console.log(nameArray);
-nameArray.push('Mônica');
-console.log(nameArray);
-nameArray.pop();
-console.log(nameArray);
-console.log('A posição do Samuel é:', nameArray.indexOf('Samuel'));
-console.log(nameArray);
-nameArray.splice(nameArray.indexOf('Eide'), 1, 'Milk');
-console.log(nameArray);
-
 // Avançando com Arrays
 // slice()
 let peopleArray = ['John', 'Eide', 'Ester', 'Milk'];
@@ -272,37 +218,6 @@ console.log(newPeopleArray);
 let friendsArray = ['Jack', 'Nina', 'Black', 'Pérola'];
 let familyArray = peopleArray.concat(friendsArray);
 console.log(familyArray);
-
-// Exercício: escreva uma função que recebe um array com todos os meses do ano e divida em trimestres:
-
-function divideIntoQuarters(array) {
-  const quarters = [];
-
-  for (let i = 0; i < array.length; i += 3) {
-    const quarter = array.slice(i, i + 3);
-    quarters.push(quarter);
-  }
-
-  return quarters;
-}
-
-const monthsOfYear = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
-
-const quartersOfYear = divideIntoQuarters(monthsOfYear);
-console.log(quartersOfYear);
 
 // Filter()
 let numbersToFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -342,44 +257,6 @@ let employeeList = employees.filter(
     console.log(value.name);
   }
 );
-
-// Exercício: crie uma lista com eletrodomésticos(produtos) com os seguintes dados, id, description e category
-// Crie uma função para filtrar por categoria e retornar apenas Kitchen Appliances.
-
-const appliances = [
-  {
-    id: 1,
-    description: "Refrigerator",
-    category: "Kitchen Appliances"
-  },
-  {
-    id: 2,
-    description: "Washing Machine",
-    category: "Laundry Appliances"
-  },
-  {
-    id: 3,
-    description: "Microwave Oven",
-    category: "Kitchen Appliances"
-  },
-  {
-    id: 4,
-    description: "Vacuum Cleaner",
-    category: "Cleaning Appliances"
-  },
-  {
-    id: 5,
-    description: "Air Conditioner",
-    category: "Climate Control Appliances"
-  }
-];
-
-const returnedCategories = appliances.filter((products) => {
-    return products.category === 'Kitchen Appliances';
-  }
-)
-
-console.log(returnedCategories);
 
 // Map()
 let numbersToMap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -478,3 +355,52 @@ let p2 = createPerson('Milk', 'Conhonho');
 
 console.log(p1);
 console.log(p2);
+
+// Classes
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  speak() {
+    console.log('Hello,', this.firstName);
+  }
+
+  get fullName() {
+    console.log('hello,', this.firstName, this.lastName);
+  }
+}
+
+p1 = new Person('Josan', 'Johnata')
+p1.speak();
+p1.fullName;
+
+// Herança
+class ElectronicDevice {
+  constructor(name) {
+    this.name = name;
+    this.connected = false;
+  }
+
+  toConnect() {
+    if(this.connected) {
+      console.log('It is already on!');
+      return;
+    }
+    this.connected = true;
+  }
+}
+
+class SmartPhone extends ElectronicDevice {
+  constructor(name, color, model) {
+    super(name);
+    this.color = color;
+    this.model = model;
+  }
+}
+
+let s1 = new SmartPhone('Samsung', 'Black', 'S20 FE');
+console.log(s1);
+s1.toConnect();
+s1.toConnect();
