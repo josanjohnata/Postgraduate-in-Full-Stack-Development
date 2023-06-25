@@ -431,3 +431,50 @@ console.log(total);
 dozens.forEach(function(_value, index, array) {
   console.log(array[index]);
 })
+
+// Funções
+function multiplicar (a, b) {
+  return a * b;
+}
+
+let x = multiplicar(2, 3);
+console.log(x); // Resultado: 6
+
+function funcao(a, b = 2, c = 4) {
+  console.log(a + b + c);
+}
+funcao(2); // Resultado: 8
+
+// Quando não souber quantos e/ou quais argumentos a função deve receber:
+function funcWithoutArgs(...args) {
+  console.log(args);
+}
+funcWithoutArgs(1, 2, 3, 4, 5, 6) // Resultado: [1, 2, 3, 4, 5, 6]
+
+// Objetos
+let person = {
+  name: 'Josan',
+  lastName: 'Johnata',
+}
+
+console.log(person['lastName']);
+console.log(person.lastName);
+
+let person1 = new Object();
+person1.name = 'Ester';
+person1.lastName = 'Pontes';
+person1.speakName = function() {
+  console.log('Nome é', this.name);
+};
+person1.speakName();
+console.log(person1.name);
+console.log(person1.lastName);
+
+function createPerson(name, lastName) {
+  return {name, lastName};
+};
+let p1 = createPerson('Eide', 'Maranhão');
+let p2 = createPerson('Milk', 'Conhonho');
+
+console.log(p1);
+console.log(p2);
