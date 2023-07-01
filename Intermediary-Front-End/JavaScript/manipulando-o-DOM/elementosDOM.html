@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elemento DOM</title>
+
+  <!-- Trabalhando com Eventos -->
+  <script>
+    function eventExemple() {
+      alert('Clicando no botão');
+    };
+
+    function mouseOver() {
+      alert('Passando o mouse pode cima do botão')
+    };
+
+    function newItem() {
+      let fieldName = document.getElementById('name');
+      let value = fieldName.value;
+      console.log({value});
+      alert('Seu nome é:', value)
+    };
+  </script>
+</head>
+<body>
+  <!-- Trabalhando com Eventos -->
+  <p>Clique no botão a seguir e veja o resultado</p>
+  <button onclick="eventExemple()">Clique aqui!</button>
+  <button onmouseover="mouseOver()">Passe o mouse por cima!</button>
+  <form>
+    <input type="email" name="email" id="email">
+    <input type="text" name="text" id="text">
+
+    <button type="submit" onclick="newItem()">Cadastrar</button>
+  </form>
+
+  <!-- Buscando Elementos -->
+  <div>
+    <h1>Usando seletor do DOM</h1>
+    <ul>
+      <li>Java</li>
+      <li>Python</li>
+      <li>NodeJS</li>
+    </ul>
+    <div id="conteudo" name="divConteudo" class="mensagem">
+
+    </div>
+    <div name="divConteudo" class="mensagem">
+
+    </div>
+    <div name="divConteudo" class="mensagem">
+
+    </div>
+    <span id="novoSpan" class="novo">
+      Texto no span!
+    </span>
+    <div class="mensagem">
+
+    </div>
+  </div>
+  
+  <!-- Criando Elementos -->
+  <ul id="createNewList">
+    <li>Produtos</li>
+  </ul>
+</body>
+<!-- Buscando Elementos -->
+<script>
+  let element0 = document.getElementsByTagName('li')[0];
+  element0.style.color = 'blue';
+
+  let element1 = document.getElementsByTagName('li')[1];
+  element1.style.background = 'red';
+
+  let element2 = document.getElementsByTagName('li')[2];
+  element2.style.color = 'purple';
+  element2.innerText = 'React Native';
+
+  let elementDiv = document.getElementById("conteudo");
+  elementDiv.innerHTML = '<p>Estou colocando a tag p dentro da div</p>';
+
+  let elementDivName = document.getElementsByName('divConteudo')[1];
+  elementDivName.style.color = 'pink';
+  elementDivName.innerText = 'Estou colocando um texto';
+
+  let elementDivClass = document.getElementsByClassName('mensagem')[2];
+  elementDivClass.innerHTML = '<p>Estou colocando a tag p dentro da div 2 por className</p>';
+
+  let elementSpanClass = document.querySelector('span.novo');
+  elementSpanClass.style.color = 'yellow';
+
+  let elementSelector = document.querySelectorAll('.mensagem')[3];
+  elementSelector.innerHTML = '<p>Estou adicionando texto com o Selector</p>';
+</script>
+
+<!-- Criando Elementos -->
+<script>
+  let createElement = document.createElement('div');
+  createElement.innerText = 'Criando elemento: incluindo texto na div';
+  createElement.style.backgroundColor = 'lightgreen';
+  document.body.append(createElement);
+
+  let createNewList = document.getElementById('createNewList');
+  let newLi = document.createElement('li');
+  newLi.textContent = 'Quem somos';
+  createNewList.appendChild(newLi);
+</script>
+</html>

@@ -1,0 +1,130 @@
+# Elementos do DOM
+- Document Object Model
+  Quando uma página é carregada, o navegador cria um Document Object Model fa página.
+  O modelo HTML DOM é construído como uma árvore dde objetos (objects):
+      HTML Document
+__________________________
+  <html lang="en">
+    <head>
+      <title>My HTML Document</title>
+    </head>
+    
+    <body>
+      <h1>Heading</h1>
+      <div id="div1">
+        <p>P Tag 1</p>
+      </div>
+      <div id="div2">
+        <p class="p2">P Tag 2</p>
+      </div>
+    </body>
+  </html>
+
+  Document Object Model (DOM)
+  _____________________________
+          __________
+         | Document |
+           ___|__
+    ------| HTML |-------
+  __|__               __|__
+ |head |             |body |
+___|___    ____________|_____________________
+|title|   |h1| |div id="div1"| |div id="div2"|
+   |                  _|_       _____|______
+My HTML Document      |p|      |p class="p2"|
+                       |             |
+                    P Tag 1       P Tag 2
+
+  - Com o modelo de objeto, JavaScript tem todo o poder necessário para criar HTML dinamicamente:
+    - JavaScript pode alterar todos os elementos HTML na página
+    - JavaScript pode alterar todos os atributos dos elementos HTML na página
+    - JavaScript pode alterar todos os estilos CSS
+    - JavaScript pode remover um elemento HTML e seus atributos
+    - JavaScript pode adicionar um elemento HTML e seus atributos
+    - JavaScript pode reagir a todos os eventos que ocorrerem em uma página
+    - JavaScript pode criar novos eventos na página
+
+  - Usando o DOM
+    - Window - nosso primeiro elemento da árvore do DOM
+      - window.alert()
+      - window.confirm()
+      - window.prompt()
+  - Encontrando elementos
+    -> Através da tag
+        document.getElementsByTagName()
+       método retorna uma coleção de todos os elementos com um nome de tag especificado.
+       Exemplo:
+       let variasLi = documentElementsByTagName("li");
+       Para pegar a primeira li
+       let primeiraLi = documentElementsByTagName("li")[0];
+
+       Depois que temos o elemento podemos fazer qualquer coisa com ele. Por exemplo, trocar o valor dele ou trocar a cor dele.
+  - Trabalhando com Eventos
+    -> O que é um evento?
+       A interação do JavaScript com o HTML é tratada por meio de eventos que ocorrem quando o usuário ou o navegador manipula uma página.
+       
+       Quando a página é carregada, ela é chamada de evento.
+       
+       Quando o usuário clica em um botão, esse clique também é um evento.
+       Outros exemplos incluem eventos como pressionar qualquer tecla, fechar uma janela, redimensionar uma janela etc.
+       
+       Os desenvolvedores podem utilizar esses eventos para executar respostas codificadas em JavaScript, o que faz com que os botões fechem as janelas,
+       as mensagens sejam exibidas aos usuários, os dados sejam validados e praticamente qualquer outro tipo de resposta que você possa imaginar.
+
+# Material da aula
+
+Observação: este site inclui um sistema de acessibilidade. Pressione Control-F11 para ajustar o site aos deficientes visuais que usam um leitor de tela; Pressione Control-F10 para abrir um menu de acessibilidade.
+Pressione Enter para acessar acessibilidade para cegos que usam leitores de tela
+Pressione Enter para Navegação pelo Teclado
+Pressione Enter para acessar o menu de acessibilidade
+Elementos do DOM
+Introdução
+
+Nesta aula, vamos escrever programas em JavaScript com entrada, processamento e saída de resultados com uma estrutura sequencial. Em seguida, vamos entender as formas de seleção simples, composta e encadeada para desenvolver a estrutura de seleção em JavaScript. Usando já o elemento window do DOM.
+
+Objetivos da aula
+
+Definir os conceitos de DOM.
+Reconhecer elementos DOM com linguagem Javascript
+Demonstrar a implementação do conceito DOM na linguagem Javascript.
+ 
+
+Resumo
+
+Entrada, Processamento e Saída de Dados em JavaScript
+
+O objetivo de um programa é escrever um código no computador para resolver problemas. Para isso, é preciso que o programa tenha a entrada de dados, para que sejam processados e então os resultados apresentando para o usuário. A estrutura de um programa em JavaScript é como segue. Utilizamos // para comentar uma linha e /* ... */ para comentar várias linhas.
+
+Por exemplo, a declaração e comentários num programa JavaScript segue o seguinte código:
+
+Para exemplificar a entrada de dados e a saída de informações em JavaScript, vamos desenvolver um programa JavaScript que recebe dois inteiros e mostra ambos os números.
+
+Após a compilação e execução do programa JavaScript, temos:
+
+Estrutura Sequencial em JavaScript
+
+A estrutura sequencial é um programa JavaScript que possui entrada de dados, processamento desses dados em resultados e saída desses resultados. Por exemplo, desenvolva um programa JavaScript que recebe dois valores inteiros e mostra a soma destes dois números.
+
+O resultado da execução deste programa JavaScript fica:
+
+Outro exemplo de estrutura sequencial para desenvolver um programa JavaScript que recebe duas notas bimestrais, calcula e mostra a média aritmética destas duas notas. Lembre-se que sempre que antes de sair escrevendo o programa JavaScript, é importante entender qual o problema que precisa ser resolvido, identificar a entrada de dados e seus tipos e a saída dos resultados.
+
+O resultado da execução deste programa JavaScript fica:
+
+Estrutura de Seleção em JavaScript
+
+Para entendermos a aplicação da estrutura de decisão em um programa JavaScript, vamos praticar desenvolvendo um algoritmo que recebe um valor real, verifica e mostra se esse número é negativo.
+Entendendo que precisamos receber como entrada de dado um float, um processamento para verificar se o número é negativo e apresentar esta informação. Neste programa, vamos utilizar uma estrutura de decisão simples.
+
+Veja o resultado da execução do programa JavaScript.
+
+Vamos praticar agora desenvolvendo um programa JavaScript que recebe um valor inteiro, verifica e mostra se esse número é par ou ímpar.
+Neste programa JavaScript, temos como entrada de dados um número inteiro, processando esse número para verificar se é par ou ímpar e apresentando esse resultado.
+
+O resultado da execução deste programa JavaScript:
+
+
+Referência Bibliográfica
+
+Deitel, Paul J. e Deitel, Harvey M. Ajax, Rich Internet Applications e Desenvolvimento Web para programadores. São Paulo. Pearson Prentice Hall. 2008.
+FREEMAN, Eric. Use a cabeça!: programação JavaScript. 1ª Ed. São Paulo: Alta Books, 2016.
