@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title = 'descomplica';
   constructor() { }
-
-  nome:string = 'Josan Johnata';
+  nome:string = "Professor Bruno Hauck";
   ngOnInit(): void {
-    
   }
+
+
 }
