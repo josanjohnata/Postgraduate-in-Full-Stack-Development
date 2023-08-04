@@ -1,0 +1,398 @@
+Consulta com Funções de uma única Linha
+Introdução
+
+É através da linguagem SQL que interagimos com o SGBD. Essa linguagem é composta de categorias de comandos. São elas DDL (comandos de definição de estruturas), DML (comandos de manipulação de dados, DCL (comandos de controle) e DQL (comandos de consulta).
+
+Conhecer os comandos da linguagem SQL é fundamental para acessar o SGBD, manipular estruturas de armazenamento e seus dados.
+
+Objetivos da aula
+
+Gerar Consultas, através da prática do comando SELECT,  com operações entre Campos;
+Realizar consultas com Funções de manipulação de dados;
+Realizar consultas com funções de  conversão de caracteres, nulos e estrutura de decisão;
+Entender e Desenvolver comandos da  linguagem SQL.
+Resumo
+
+É possível realizar operações aritméticas entre os campos de uma tabela dentro do comando Select. Entenda que trata-se apenas de uma consulta, nenhum dado está sendo alterado. Veja o exemplo:
+
+Figura 1- Consultas com Operações entre Campos - Fonte: Autor, 2023.
+Figura 1- Consultas com Operações entre Campos - Fonte: Autor, 2023.
+
+O comando acima calcula o salário anual dos funcionários. Com os Operadores aritméticos podemos realizar expressões aritméticas. Veja o exemplo:
+
+Figura 2 - Consultas com Expressões - Fonte: Autor, 2023.
+Figura 2 - Consultas com Expressões - Fonte: Autor, 2023.
+
+Observe, que nessa consulta, é feito o cálculo do salário anual, o valor do bônus anual que corresponde a 40% do salário anual e o valor total com a soma do salário anual e o bônus.
+
+ 
+
+Apelidos de Coluna
+
+Ao exibir o resultado de uma consulta, a aplicação usa o nome da coluna selecionada como o cabeçalho da mesma. Em muitos casos, este cabeçalho pode não ser descritivo e, desse modo, de difícil compreensão. É possível alterar um cabeçalho de coluna usando um apelido da coluna.
+
+Especifique o apelido após a coluna na lista SELECT usando um espaço como um separador. Por default, os cabeçalhos de apelidos aparecem em letras maiúsculas. Se o apelido possuir espaços, caracteres especiais (tais como # ou $) ou fizer distinção entre maiúsculas e minúsculas, coloque o apelido entre aspas duplas (" ").
+
+Figura 3 - Consulta com Apelidos nos Campos - Fonte: Autor ,2023.
+Figura 3 - Consulta com Apelidos nos Campos - Fonte: Autor ,2023.
+
+Operador de Concatenação
+
+É possível vincular colunas à outras colunas, expressões aritméticas ou valores constantes usando o operador de concatenação (||). As colunas em cada lado do operador são combinadas para formar uma coluna de saída única.
+
+Figura 4 - Concatenação de Campos - Fonte: Autor, 2023.
+Figura 4 - Concatenação de Campos - Fonte: Autor, 2023.
+
+E como qualquer outra operação entre campos pode receber apelidos.
+
+Figura 5 - Concatenação com Apelido - Fonte: Autor, 2023.
+Figura 5 - Concatenação com Apelido - Fonte: Autor, 2023.
+
+Para melhorar a visualização do relatório gerado pela consulta, é possível concatenar campo com uma literal, ou seja, uma String que não muda.
+
+Figura 6 - concatenação de campo com literal - fonte: autor, 2023.
+Figura 6 - concatenação de campo com literal - fonte: autor, 2023.
+
+Funções de uma única Linha
+
+Funções de uma única linha são usadas para manipular itens de dados. Elas aceitam um ou mais argumentos e retornam um valor para cada linha retornada pela consulta. As funções de linha são utilizadas para manipular caracteres, números, datas e para conversão de dados.
+
+ 
+
+
+
+Figura 7 - funções de Manipulação de Caracteres - Fonte: autor. 
+Figura 7 - funções de Manipulação de Caracteres - Fonte: autor.
+
+Figura 8 - Manipulação de Caracteres - Fonte: Autor, 2023.
+Figura 8 - Manipulação de Caracteres - Fonte: Autor, 2023.
+
+Funções Numéricas
+
+ 
+
+
+
+Figura 9 - funções numéricas - Fonte: autor, 2023.
+Figura 9 - funções numéricas - Fonte: autor, 2023.
+
+Funções de Conversão de Data
+
+SYSDATE é a função de data que retorna a data e a hora atual. Você pode usar o SYSDATE da mesma forma como usaria qualquer outro nome de coluna. Por exemplo, é possível exibir a data atual selecionando SYSDATE a partir da tabela. Costuma-se selecionar SYSDATE em uma tabela fictícia
+
+chamada DUAL.
+
+ 
+
+Figura 10- Funções de Conversão de Data - Fonte: Autor, 2023.
+Figura 10- Funções de Conversão de Data - Fonte: Autor, 2023.
+
+Funções de linha para manipulação de datas
+
+O Oracle armazena datas em um formato numérico interno, representando o século, ano, mês, dia, horas, minutos e segundos, sendo assim, pode-se executar operações aritméticas com elas. O formato de entrada e exibição default para qualquer data é DD-MON-YY. Datas válidas para a Oracle estão entre 1 de janeiro, 4712 A.C. e 31 de dezembro, 9999 D.C.
+
+ 
+
+O exemplo apresentado a seguir utiliza o operador aritmético de subtração.
+
+ 
+
+Exemplo: Exibir o nome e o número de semanas trabalhadas de todos os funcionários:
+
+ 
+
+Figura 11- Operações com Datas - Fonte: autor, 2023.
+Figura 11- Operações com Datas - Fonte: autor, 2023.
+
+MONTHS_BETWEEN(data1, data2): Retorna o número de meses entre a data1 e a data2. O resultado pode ser positivo ou negativo. Se data1 for posterior a data2, o resultado será positivo; se data1 for anterior a data2, o resultado será negativo. A parte não-inteira do resultado representa uma parte do mês.
+
+ 
+
+Exemplo: Selecionar o número de meses trabalhados de cada funcionário.
+
+ 
+
+SELECT ENAME, TRUNC(MONTHS_BETWEEN(SYSDATE, HIREDATE)) AS MESES
+
+FROM scott.EMP;
+
+Resultado:
+
+ENAME                  MESES
+
+KING                        253
+
+BLAKE                    259
+
+CLARK                   258
+
+JONES                   260
+
+...
+
+ 
+
+ADD_MONTHS(data, n): Adiciona um número de meses, representados por n à data. O valor de n deve ser inteiro e pode ser positivo ou negativo.
+
+ 
+
+Exemplo: Adicionar 10 meses a data de admissão do funcionário.
+
+ 
+
+SELECT ENAME,
+
+ADD_MONTHS( HIREDATE, 10) AS ADICIONAR_10_MESES
+
+FROM scott.EMP;
+
+ 
+
+Resultado:
+
+ENAME      ADICIONAR_10
+
+KING         17-SEP-82
+
+BLAKE       01-MAR-82
+
+CLARK      09-APR-82
+
+...
+
+Funções para conversão de dados   
+Muitas vezes é necessário que conversões de dados sejam feitas para que seja possível a realização de alguma operação, para isso existem as funções de conversão de tipos de dados TO_CHAR(numero ou data, formato), TO_NUMBER(char), TO_DATE(char, ‘formato’), NVL(coluna, valor).
+
+ 
+
+Conversão de datas em caracteres
+ 
+
+A conversão de datas em caracteres é especialmente interessante para algum tipo de manipulação que requeira a apresentação de datas em formatos específicos.
+
+ 
+
+Para isso, deve-se:
+
+ 
+
+Especificar o  modelo de formato deve estar entre aspas simples e fazendo distinção entre maiúsculas e minúsculas.
+Utilizar formato de data válido (vide lista de formatos apresentada anteriormente).
+Separar o valor da data do modelo de formato por uma vírgula.
+ 
+
+Alguns formatos para representação e manipulação das datas são:
+
+ 
+
+DD - dia do mês
+
+DY - nome do dia abreviado com 3 letras
+
+DAY - nome do dia
+
+DDSP - nome do dia no mês por extenso
+
+MM - número do mês
+
+MON - nome do mês abreviado
+
+MONTH - nome do mês por extenso
+
+YY - ano com dois dígitos
+
+YYYY - ano com quatro dígitos
+
+HH:MI:SS - hora, minutos e segundos
+
+HH24 - hora  (0 a 23)
+
+AM ou PM - indicador meridiano
+
+ 
+
+Exemplo : Exibir a data e hora do sistema seguindo o formato do exemplo: 30/Abril/2023 11:32:15
+
+ 
+
+Select to_char(sysdate,’DD/MMMM/YYYYHH24:MI:SS’)
+
+from dual;
+
+ 
+
+Resultado:
+
+18/MARÇO /2023 18:31:00
+
+Converte uma cadeia de caracteres para data
+ 
+
+Exemplo:
+
+Select to_date('01/março/2003') from dual;
+
+Resultado: 01/03/03
+
+Função NVL
+ 
+
+NVL (arg1, arg2) – Conversão de nulos em valores. O valor informado em arg2 substitui os nulos encontrados em arg1. Pode-se usar NVL para converter qualquer tipo de dados, porém o valor do retorno  deverá ser  do mesmo  tipo de dados do arg1.
+
+ 
+
+Exemplo: Exibir o nome, salário, comissão e comissão total de todos os funcionários. Na coluna comissão total, se o funcionário não possuir comissão deverá ser exibido o valor 0.
+
+ 
+
+SELECT ename, sal, comm, NVL(comm, 0) as “COMISSAO TOTAL”  FROM scott.EMP;
+
+ 
+
+Resultado:
+
+ 
+
+ENAME             SAL       COMM     NVL(COMM,0)
+
+SMITH             800                      0
+
+ALLEN            1600        300         300
+
+WARD             1250        500         500
+
+JONES            2975                      0
+
+MARTIN           1250       1400        1400
+
+BLAKE            2850                      0
+
+ 
+
+ 
+
+Função DECODE (coluna, valor1, operação1,
+
+                               valor2, operação2,
+
+                               ...
+
+                                           operaçãoN) – Funciona de maneira análoga a estrutura de seleção Se-Senão. A função decode verifica se o conteúdo do argumento coluna é igual a valor1, se verdadeiro então realiza a operação indicada em operação1, senão verifica se o conteúdo da coluna é igual a valor2, se for verdadeiro realiza a operação indicada em operação2 e segue até o final. A operaçãoN (default) será realizada para todas as linhas cuja coluna não atende às condições anteriores. Se o valor default for omitido, será retornado um valor nulo onde um valor de pesquisa não corresponde a quaisquer valores de resultado.
+
+ 
+
+Exemplo: Exibir os cargos e salários dos funcionários e calcular o reajuste salarial de acordo com as especificações:
+
+ 
+
+
+SELECT job, sal,
+
+        DECODE(job,'ANALYST',SAL*1.1,                                                                                             'CLERK'  , SAL*1.15,
+
+            'MANAGER', SAL*1.20,
+
+                           SAL) SAL_REVISADO  
+
+FROM scott.emp;
+
+ 
+
+Resultado:
+
+JOB            SAL     SAL_REVISADO
+
+PRESIDENT      5000           5000
+
+MANAGER        2850           3420
+
+MANAGER        2450           2940
+
+...
+
+ 
+
+A solução do exemplo anterior pode ser lida da seguinte maneira:
+
+Selecionar cargo, salário e:
+
+Se o cargo for igual a ‘ANALYST’, então, aumenta o salário em 10%.
+
+Se cargo for igual a ‘CLERK’, então, aumenta salário em 15%.
+
+Se cargo for igual a ‘MANAGER’, então, aumenta salário em 20%.
+
+senão mostre salário apenas da tabela EMP
+
+ 
+
+Conteúdo bônus
+
+Funções de Conversão de números em caracteres
+
+ 
+
+Assim como na conversão de datas em caracteres a  conversão de números em caracteres é é especialmente utilizada para manipulação que requeira a apresentação de números em formatos específicos. A seguir são apresentados alguns exemplos de formatos e a exibição gerada pela sua utilização:
+
+ 
+
+Exemplo: valor de entrada 1234
+
+ 
+
+
+Exemplo: Exibir  os valores da coluna do salário no formato original e no formato monetário.
+
+ 
+
+SELECT sal, TO_CHAR(sal, '$99,999.99') FROM scott.EMP;
+
+ 
+
+Resultado:
+
+       SAL          TO_CHAR(SAL
+
+       800             $800.00
+
+      1600         $1,600.00
+
+      1250         $1,250.00
+
+  
+
+Conversão de caracteres em números
+
+ 
+
+Converte uma cadeia de caracteres numéricos para um número inteiro
+
+ 
+
+Exemplo: Exibir o resto da divisão do caractere 999 por 5.
+
+ 
+
+select mod(to_number('999'),5) from dual;
+
+ 
+
+Resultado:4
+
+ 
+
+Observe que o valor 999 é do tipo  caractere, sendo assim para realização da operação aritmética solicitada deve-se convertê-lo para um tipo numérico.
+
+ 
+
+Referências Bibliográficas
+
+DATE, C. J. Introdução a sistemas de banco de dados. Rio de Janeiro. Ed. Campus, 1991.
+
+CHEN, Peter. Modelagem de dados: a abordagem entidade-relacionamento para projeto lógico. São Paulo: Makron Books, 1990.
+
+MEDEIROS, L. F. Banco de dados, princípios e práticas, 1ª. ed., Ed. Intersaberes, 2013.
+
+PUGA, S., França E., GOYA M., Banco de dados: Implementação em SQL, PL/SQL e Oracle 11g, Ed. Pearson, 2013.
+
+ELMASRI R., NAVATHE, S. Sistemas de Banco de Dados, 4ª ed. Ed. Pearson, 2005.
