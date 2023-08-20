@@ -47,3 +47,15 @@ java.nio.file.FileSystemException: /Volumes/Spring Tool Suite 4/SpringToolSuite4
 	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
 	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:94)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.help.base 2 0 2023-08-20 17:12:17.660
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.jdt.doc.user_3.15.1800.v20230601-1614 [254]'. The index should be rebuilt with Lucene 9.4.2
+
+!ENTRY org.eclipse.help.base 2 0 2023-08-20 17:12:17.662
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.server.ui.doc.user_1.1.600.v201901310132 [472]'. The index should be rebuilt with Lucene 9.4.2
+
+!ENTRY org.eclipse.help.base 2 0 2023-08-20 17:12:17.669
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.pde.doc.user_3.14.2000.v20230601-1614 [381]'. The index should be rebuilt with Lucene 9.4.2
+
+!ENTRY org.eclipse.help.base 2 0 2023-08-20 17:12:17.672
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.28.0.v20230601-1614 [394]'. The index should be rebuilt with Lucene 9.4.2
