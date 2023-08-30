@@ -1,0 +1,81 @@
+Conjunto de Refatorações
+Introdução
+
+A refatoração de código é um processo e um conjunto de técnicas para melhorar a estrutura interna do seu código sem alterar seu comportamento. A refatoração trata de tornar o código mais fácil de ler, trabalhar, manter e estender. Isso pode ajudar a melhorar a eficiência do código e, potencialmente, resolver alguns problemas.
+
+As técnicas de refatoração envolvem a aplicação de diferentes pequenas alterações cumulativas (mini refatorações) ao código. Individualmente, cada mini-refatoração é pequena o suficiente para reduzir o risco de introduzir erros, mas coletivamente, a refatoração pode aprimorar significativamente seu código.
+
+ 
+
+Objetivos da aula
+
+Compreender e aplicar o processo de extrair uma função (e/ou método).
+Compreender e aplicar o processo de extrair uma variável.
+Compreender e aplicar o processo de encapsular variáveis.
+Compreender e aplicar o processo de renomear as variáveis.
+Compreender e aplicar o processo de combinar funções (e/ou métodos) em uma classe.
+ 
+
+Resumo
+
+A refatoração é o processo de reestruturação do código, sem alterar sua funcionalidade original. O objetivo da refatoração é melhorar o código interno fazendo várias pequenas alterações sem alterar o comportamento externo do código.
+
+Programadores de computador e desenvolvedores de software refatoram o código para melhorar o design, a estrutura e a implementação do software. A refatoração melhora a legibilidade do código e reduz as complexidades. A refatoração também pode ajudar os desenvolvedores de software a encontrar bugs ou vulnerabilidades ocultas em seu software.
+
+O processo de refatoração apresenta muitas pequenas alterações no código-fonte de um programa. Uma abordagem para refatoração, por exemplo, é melhorar a estrutura do código-fonte em um ponto e depois estender as mesmas alterações sistematicamente para todas as referências aplicáveis ​​ao longo do programa. O processo de pensamento é que todas as pequenas alterações que preservam o comportamento em um corpo de código têm um efeito cumulativo. Essas alterações preservam o comportamento original do software e não modificam seu comportamento.
+
+Grande parte da refatoração é dedicada à composição correta de métodos. Na maioria dos casos, métodos excessivamente longos são a raiz de todos os males. Os caprichos do código dentro desses métodos ocultam a lógica de execução e tornam o método extremamente difícil de entender — e ainda mais difícil de mudar. As técnicas de refatoração neste grupo agilizam os métodos, removem a duplicação de código e abrem caminho para melhorias futuras.
+
+A partir desse contexto, segue o Quadro 1 que apresenta as técnicas de refatoração.
+
+ 
+
+Quadro 1 - As técnicas de refatoração
+
+
+Fonte: FOWLER (2019).
+Fonte: FOWLER (2019).
+
+Por fim, podemos relacionar que a refatoração de código é o processo de alteração do código-fonte de um programa que não afeta seu comportamento e visa facilitar a compreensão de seu trabalho e/ou simplificar seu suporte posterior. Normalmente, refatorar o código de qualquer programa é fazer pequenas alterações nele, cada uma das quais não altera o comportamento do programa em si, mas de alguma forma simplifica e/ou melhora o código.
+
+Ao mesmo tempo, é muito importante que a refatoração seja realizada com precisão e em pequenas partes, pois quando um programador alterar uma parte do código, é muito mais fácil acompanhar a correção das alterações e não cometer mais erros. Se você refatorar grandes seções de código de uma só vez, há uma probabilidade muito alta de cometer erros, como resultado, o programa pode parar de funcionar completamente. Esse processo é baseado em uma série de pequenas alterações no código do programa que preservam seu comportamento. Como cada transformação é insignificante em termos de volume, é mais fácil para um programador rastrear sua correção, e toda a sequência dessas alterações pode levar a uma reestruturação significativa do programa e melhorar sua consistência, clareza e facilidade de compreensão do código de outros desenvolvedores.
+
+ 
+
+Como aplicar na prática o que aprendeu
+
+A refatoração pode ser executada após a implantação de um produto, antes de adicionar atualizações e novos recursos ao código existente ou como parte da programação diária.
+
+Quando o processo é executado após a implantação, normalmente, é feito antes que os desenvolvedores passem para o próximo projeto. Uma organização pode ser capaz de refatorar mais código neste ponto do ciclo de vida de entrega de software, onde os desenvolvedores têm maior disponibilidade e mais tempo para trabalhar nas mudanças necessárias no código-fonte.
+
+Um momento melhor para executar a refatoração, no entanto, é antes de adicionar atualizações ou novos recursos ao código existente. Quando realizada neste ponto, a refatoração torna mais fácil para os desenvolvedores construir no código existente porque eles estão voltando e simplificando o código, tornando-o mais fácil de ler e entender.
+
+Quando uma organização tem um forte domínio sobre o processo de refatoração, ela pode torná-lo um processo regular. Sempre que um desenvolvedor precisa adicionar algo a uma base de código, ele pode examinar o código existente para ver se ele está estruturado de forma a simplificar o processo de adição de novo código. Se não for, o desenvolvedor pode refatorar o código existente. Depois que o novo código é adicionado, o desenvolvedor pode refatorar o mesmo código novamente para torná-lo mais claro.
+
+ 
+
+Conteúdo bônus
+
+Tópicos avançados
+
+A execução de muitas refatorações automatizadas é uma maneira poderosa de melhorar seu código rapidamente. A vantagem dessa abordagem sobre a refatoração manual é que é menos provável que introduza bugs e que muitas vezes pode ser mais rápido com os atalhos de teclado corretos.
+
+A partir desse contexto, de acordo com SHIMEL (2021), os cofundadores da Moderne: Jonathan Schneider e Olga Kundzich receberam US$ 4,7 milhões em financiamento inicial em julho de 2021 para comercializar o OpenRewrite, uma ferramenta de refatoração automatizada de código aberto para código (inicialmente Java) que Schneider iniciou na Netflix. A tecnologia da Moderne reduz o tédio e o tempo necessário para a correção de software; um grande problema no mundo atual de desenvolvimento nativo da nuvem.
+
+A tecnologia se originou na Netflix por causa de sua cultura de liberdade e responsabilidade. Acionar o ciclo de vida então de diferentes softwares para coordenar as partes anticulturais, alterar os códigos da Netflix com foco na produtividade do desenvolvedor teve que pensar em maneiras de oferecer ajuda. A automação de código era uma solução única escalável, e foi assim que o OpenRewrite nasceu.
+
+A Moderne já teve grande sucesso nos melhores talentos de engenharia, devido ao alto nível de interesse, e à paixão da comunidade de desenvolvedores para resolver o problema crítico de manter o código de software por meio de automação de código. O financiamento também será usado para construir uma comunidade de código aberto vibrante e crescente para o OpenRewrite e para contribuir com receitas de refatoração e gerenciar uma estrutura principal de código aberto (SHIMEL, 2021).
+
+Para maiores informações sobre a utilização da solução de automação de código fonte OpenRewrite, leia a reportagem intitulado de “Micronaut Taps Moderne to Automate Java Framework Updates” (Micronaut utiliza a tecnologia da Moderne para automatizar as atualizações do Java Framework), disponível no seguinte link: <https://devops.com/micronaut-taps-moderne-to-automate-java-framework-updates/>.
+
+Observação: Este conteúdo não será cobrado nas avaliações e estará, obrigatoriamente, presente nas videoaulas. Fique tranquilo(a)!
+
+ 
+
+ 
+
+Referência Bibliográfica
+
+FOWLER, M. Refatoração: Aperfeiçoando o design de códigos existentes - Segunda Edição. 2019.
+
+SHIMEL, A. Automated Refactoring with Moderne. 2021. Disponível em: <https://devops.com/automated-refactoring-with-moderne/>. Acesso em 23/01/2022
